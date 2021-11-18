@@ -1,14 +1,17 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace App\Controller;
 
-use AppBundle\Entity\Task;
-use AppBundle\Form\TaskType;
+use App\Entity\Task;
+use App\Form\TaskType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class TaskController extends Controller
+class TaskController extends AbstractController
 {
     /**
      * @Route("/tasks", name="task_list")
@@ -20,6 +23,8 @@ class TaskController extends Controller
 
     /**
      * @Route("/tasks/create", name="task_create")
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function createAction(Request $request)
     {
@@ -44,6 +49,9 @@ class TaskController extends Controller
 
     /**
      * @Route("/tasks/{id}/edit", name="task_edit")
+     * @param Task $task
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function editAction(Task $task, Request $request)
     {
@@ -67,6 +75,8 @@ class TaskController extends Controller
 
     /**
      * @Route("/tasks/{id}/toggle", name="task_toggle")
+     * @param Task $task
+     * @return RedirectResponse
      */
     public function toggleTaskAction(Task $task)
     {
@@ -80,6 +90,8 @@ class TaskController extends Controller
 
     /**
      * @Route("/tasks/{id}/delete", name="task_delete")
+     * @param Task $task
+     * @return RedirectResponse
      */
     public function deleteTaskAction(Task $task)
     {

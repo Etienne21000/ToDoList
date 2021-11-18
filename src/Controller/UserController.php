@@ -1,14 +1,17 @@
 <?php
 
-namespace AppBundle\Controller;
+namespace App\Controller;
 
-use AppBundle\Entity\User;
-use AppBundle\Form\UserType;
+use App\Entity\User;
+use App\Form\UserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-class UserController extends Controller
+class UserController extends AbstractController
 {
     /**
      * @Route("/users", name="user_list")
@@ -20,6 +23,8 @@ class UserController extends Controller
 
     /**
      * @Route("/users/create", name="user_create")
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function createAction(Request $request)
     {
@@ -46,6 +51,9 @@ class UserController extends Controller
 
     /**
      * @Route("/users/{id}/edit", name="user_edit")
+     * @param User $user
+     * @param Request $request
+     * @return RedirectResponse|Response
      */
     public function editAction(User $user, Request $request)
     {
