@@ -8,6 +8,10 @@
 /var/*
 ###< symfony/cache ###
 
-###> symfony/vendor file ###
+###> symfony/vendor dir ###
 /vendor
-###> symfony/vendor file ###
+###> symfony/vendor dir ###
+
+###> symfony/migrations dir ###
+/migrations
+###> symfony/migrations dir ###
