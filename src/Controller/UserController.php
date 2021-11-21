@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
@@ -23,19 +24,28 @@ class UserController extends AbstractController
     /**
      * @Route("/users/create", name="user_create")
      * @param Request $request
+     * @param UserPasswordHasherInterface $passwordHasher
      * @return RedirectResponse|Response
      */
-    public function createAction(Request $request)
+    public function createAction(Request $request, UserPasswordHasherInterface $passwordHasher)
     {
         $user = new User();
+        $passWordHash = "";
+        //add condition on user role if admin add field select role in twig view
+        $user->setRoles(['ROLE_ADMIN']);
+
+
         $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $password = $this->get('security.password_encoder')->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
+            $hashedPassword = $passwordHasher->hashPassword(
+                $user,
+                $passWordHash
+            );
+            $user->setPassword($hashedPassword);
 
             $em->persist($user);
             $em->flush();
