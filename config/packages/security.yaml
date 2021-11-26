@@ -1,8 +1,7 @@
 security:
     enable_authenticator_manager: true
-    # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
-    password_hashers:
-        Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
+    encoders:
+        App\Entity\User: bcrypt
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
         users_in_memory: { memory: null }
@@ -16,18 +15,21 @@ security:
             security: false
         main:
             lazy: true
-            provider: users_in_memory
+            provider: app_user_provider
+            custom_authenticator: App\Security\AppLoginAuthenticator
 
             logout:
-                path: logout
+                path: app_logout
 
             login_throttling:
                 max_attempts: 3
                 interval: '1 minutes'
 
-            form_login:
-                login_path: login
-                check_path: login
+#            form_login:
+#                login_path: login
+#                check_path: login
+#                username_parameter: '_username'
+#                password_parameter: '_password'
 #            guard:
 #                authenticators:
 #                    - App\Security\LoginFormAuthenticator

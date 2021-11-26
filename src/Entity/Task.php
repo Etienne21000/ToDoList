@@ -102,15 +102,15 @@ class Task
         return $this;
     }
 
-//    public function isDone()
-//    {
-//        return $this->isDone;
-//    }
-//
-//    public function toggle($flag)
-//    {
-//        $this->isDone = $flag;
-//    }
+    public function isDone()
+    {
+        return $this->isDone;
+    }
+
+    public function toggle($flag)
+    {
+        $this->isDone = $flag;
+    }
 
     public function getUser(): ?User
     {

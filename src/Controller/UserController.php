@@ -4,15 +4,39 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\UserType;
+use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class UserController extends AbstractController
 {
+
+    /**
+     * @var EntityManagerInterface
+     */
+    private $manager;
+    /**
+     * @var UserRepository
+     */
+    private $repository;
+    /**
+     * @var UserPasswordHasherInterface
+     */
+    private $encodePass;
+
+    public function __construct(UserRepository $user, EntityManagerInterface $manager, UserPasswordHasherInterface $encodePass)
+    {
+        $this->manager = $manager;
+        $this->repository = $user;
+        $this->encodePass = $encodePass;
+    }
+
     /**
      * @Route("/users", name="user_list")
      */
@@ -30,25 +54,19 @@ class UserController extends AbstractController
     public function createAction(Request $request, UserPasswordHasherInterface $passwordHasher)
     {
         $user = new User();
-        $passWordHash = "";
         //add condition on user role if admin add field select role in twig view
         $user->setRoles(['ROLE_ADMIN']);
-
-
         $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $hashedPassword = $passwordHasher->hashPassword(
-                $user,
-                $passWordHash
-            );
-            $user->setPassword($hashedPassword);
+            $password = $passwordHasher->hashPassword($user, $user->getPassword());
 
-            $em->persist($user);
-            $em->flush();
+            $user->setPassword($password);
+
+            $this->manager->persist($user);
+            $this->manager->flush();
 
             $this->addFlash('success', "L'utilisateur a bien été ajouté.");
 
@@ -74,7 +92,10 @@ class UserController extends AbstractController
             $password = $this->get('security.password_encoder')->encodePassword($user, $user->getPassword());
             $user->setPassword($password);
 
-            $this->getDoctrine()->getManager()->flush();
+            $this->manager->persist($user);
+            $this->manager->flush();
+
+//            $this->getDoctrine()->getManager()->flush();
 
             $this->addFlash('success', "L'utilisateur a bien été modifié");
 
