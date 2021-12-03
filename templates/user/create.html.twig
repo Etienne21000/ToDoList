@@ -6,7 +6,32 @@
 {% block body %}
     <div class="row">
         {{ form_start(form, {'action' : path('user_create')}) }}
-            {{ form_widget(form) }}
+{#            {{ form_widget(form) }}#}
+        <div class="row">
+            <div class="col-md-6">{{ form_row(form.pseudo) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">{{ form_row(form.password) }}</div>
+        </div>
+{#        <div class="row">#}
+{#            <div class="col-md-6">{{ form_row(form.password) }}</div>#}
+{#        </div>#}
+        <div class="row">
+            <div class="col-md-6">{{ form_row(form.email) }}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_row(form.roles) }}
+{#                {{ dump(form_row(form)) }}#}
+{#                <label for="roles">Selectionnez un role utilisateur</label>#}
+{#                <select name="roles" class="select_user_role">#}
+{#                    <option selected disabled>Selectionnez un role</option>#}
+{#                    {% for role in  form_row(form.roles.children[1]) %}#}
+{#                        <option value="#}{#{{ form_row(form.roles.children['utilisateur']) }}#}{#">#}{#{{ form_row(form.roles.children[0]) }}#}{#</option>#}
+{#                    {% endfor %}#}
+{#                </select>#}
+            </div>
+        </div>
             <button type="submit" class="btn btn-success pull-right">Ajouter</button>
         {{ form_end(form) }}
     </div>

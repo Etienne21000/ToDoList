@@ -2,7 +2,6 @@ security:
     enable_authenticator_manager: true
     encoders:
         App\Entity\User: bcrypt
-    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
         users_in_memory: { memory: null }
         app_user_provider:
@@ -44,6 +43,7 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: '^/login$', roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: '^/users', roles: ROLE_ADMIN }
          - { path: '^/tasks/{id}/edit', roles: [IS_AUTHENTICATED_FULLY, ROLE_ADMIN] }
          - { path: '^/tasks/{id}/delete', roles: [IS_AUTHENTICATED_FULLY, ROLE_ADMIN] }
          - { path: '^/users/{id}/edit', roles: [IS_AUTHENTICATED_FULLY, ROLE_ADMIN] }

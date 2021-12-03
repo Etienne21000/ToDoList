@@ -43,7 +43,7 @@ class TaskController extends AbstractController
      * @param Request $request
      * @return RedirectResponse|Response
      */
-    public function createAction(Request $request)
+    public function createAction(Request $request): ?Response
     {
         $task = new Task();
         $user = $this->getUser();
@@ -70,11 +70,14 @@ class TaskController extends AbstractController
      * @param $id
      * @param Request $request
      * @return RedirectResponse|Response
+     * @throws \Exception
      */
     public function editAction(int $id, Request $request)
     {
         $task = $this->repository->findOneBy(["id" => $id]);
         $form = $this->createForm(TaskType::class, $task);
+
+        $this->denyAccessUnlessGranted('edit', $task);
 
         $form->handleRequest($request);
 
@@ -119,11 +122,12 @@ class TaskController extends AbstractController
 
     /**
      * @Route("/tasks/{id}/delete", name="task_delete")
-     * @param Task $task
+     * @param int $id
      * @return RedirectResponse
      */
-    public function deleteTaskAction(Task $task)
+    public function deleteTaskAction(int $id)
     {
+        $task = $this->repository->findOneBy(['id' => $id]);
         $this->manager->remove($task);
         $this->manager->flush();
 

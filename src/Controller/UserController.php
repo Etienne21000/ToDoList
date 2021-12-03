@@ -54,8 +54,6 @@ class UserController extends AbstractController
     public function createAction(Request $request, UserPasswordHasherInterface $passwordHasher)
     {
         $user = new User();
-        //add condition on user role if admin add field select role in twig view
-        $user->setRoles(['ROLE_ADMIN']);
         $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
@@ -64,6 +62,7 @@ class UserController extends AbstractController
             $password = $passwordHasher->hashPassword($user, $user->getPassword());
 
             $user->setPassword($password);
+            $user->setRoles($user->getRoles());
 
             $this->manager->persist($user);
             $this->manager->flush();
@@ -94,8 +93,6 @@ class UserController extends AbstractController
 
             $this->manager->persist($user);
             $this->manager->flush();
-
-//            $this->getDoctrine()->getManager()->flush();
 
             $this->addFlash('success', "L'utilisateur a bien été modifié");
 
