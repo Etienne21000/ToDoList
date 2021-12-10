@@ -3,7 +3,6 @@
 namespace App\Form;
 
 use App\Entity\User;
-use Doctrine\ORM\Query\Expr\Select;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -19,8 +18,10 @@ class UserType extends AbstractType
     {
         parent::buildForm($builder, $options);
         $builder
-//            ->add('username', TextType::class, ['label' => "Nom d'utilisateur"])
-            ->add('pseudo', TextType::class, ['label' => 'Pseudo'])
+            ->add('pseudo', TextType::class, [
+                'label' => 'Pseudo',
+                'required' => true,
+            ])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'Les deux mots de passe doivent correspondre.',
@@ -28,15 +29,16 @@ class UserType extends AbstractType
                 'first_options'  => ['label' => 'Mot de passe'],
                 'second_options' => ['label' => 'Tapez le mot de passe à nouveau'],
             ])
-            ->add('email', EmailType::class, ['label' => 'Adresse email']);
-            /*->add('roles', ChoiceType::class,
-                ['label' => 'Role utilisateur',
-                    'choices' => [
-                        'utilisateur' => 'ROLE_USER',
-                        'administrateur' => 'ROLE_ADMIN',
-                        'super administrateur' => 'ROLE_SUPERADMIN',
-                    ],
-                ]);*/
+            ->add('email', EmailType::class, ['label' => 'Adresse email', 'required' => true,])
+            ->add('roles', ChoiceType::class, [
+                'multiple' => true,
+                'required' => true,
+                'choices' => [
+                    'utilisateur' => 'ROLE_USER',
+                    'administrateur' => 'ROLE_ADMIN',
+                    'super administrateur' => 'ROLE_SUPERADMIN',
+                ],
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver)
