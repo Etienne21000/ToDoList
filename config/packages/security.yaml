@@ -21,7 +21,7 @@ security:
                 path: app_logout
 
             login_throttling:
-                max_attempts: 3
+                max_attempts: 5
                 interval: '1 minutes'
 
 #            form_login:

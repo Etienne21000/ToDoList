@@ -12,6 +12,7 @@ class TaskVoter extends Voter
 {
     const VIEW = 'view';
     const EDIT = 'edit';
+    const DELETE = 'delete';
 
     private $security;
 
@@ -31,7 +32,7 @@ class TaskVoter extends Voter
      */
     protected function supports(string $attribute, $subject): bool
     {
-        if (!in_array($attribute, [self::VIEW, self::EDIT])) {
+        if (!in_array($attribute, [self::VIEW, self::EDIT, self::DELETE])) {
             return false;
         }
 
@@ -65,6 +66,7 @@ class TaskVoter extends Voter
         switch ($attribute) {
             case self::VIEW:
             case self::EDIT:
+            case self::DELETE:
                 return $this->canDoAction($task, $user);
             break;
         }

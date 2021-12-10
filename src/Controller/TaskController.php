@@ -128,6 +128,7 @@ class TaskController extends AbstractController
     public function deleteTaskAction(int $id)
     {
         $task = $this->repository->findOneBy(['id' => $id]);
+        $this->denyAccessUnlessGranted('delete', $task);
         $this->manager->remove($task);
         $this->manager->flush();
 
