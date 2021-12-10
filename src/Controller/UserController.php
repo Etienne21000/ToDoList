@@ -54,8 +54,7 @@ class UserController extends AbstractController
     public function createAction(Request $request, UserPasswordHasherInterface $passwordHasher)
     {
         $user = new User();
-        //add condition on user role if admin add field select role in twig view
-        $user->setRoles(['ROLE_ADMIN']);
+        $this->denyAccessUnlessGranted('create', $user);
         $form = $this->createForm(UserType::class, $user);
 
         $form->handleRequest($request);
@@ -64,6 +63,7 @@ class UserController extends AbstractController
             $password = $passwordHasher->hashPassword($user, $user->getPassword());
 
             $user->setPassword($password);
+            $user->setRoles($user->getRoles());
 
             $this->manager->persist($user);
             $this->manager->flush();
@@ -78,24 +78,33 @@ class UserController extends AbstractController
 
     /**
      * @Route("/users/{id}/edit", name="user_edit")
-     * @param User $user
+     * @param int $id
      * @param Request $request
+     * @param UserPasswordHasherInterface $passwordHasher
      * @return RedirectResponse|Response
      */
-    public function editAction(User $user, Request $request)
+    public function editAction(int $id, Request $request, UserPasswordHasherInterface $passwordHasher)
     {
+        $user = $this->repository->findOneBy(["id" => $id]);
+        $this->denyAccessUnlessGranted('edit', $user);
         $form = $this->createForm(UserType::class, $user);
-
+//        dd($user->getPassword()); die();
+        $userPass = $form->get('password')->getData();
+//        if(!empty($userPass)) {
+            $password = $passwordHasher->hashPassword($user, $userPass);
+            $user->setPassword($password);
+//            //$user->setPassword($user->getPassword());
+//        }
+        //dd($userPass);
+        /*if(!empty($form->get('roles')->getData())) {
+            $user->removeRole($role);
+        }*/
         $form->handleRequest($request);
 
-        if ($form->isValid()) {
-            $password = $this->get('security.password_encoder')->encodePassword($user, $user->getPassword());
-            $user->setPassword($password);
-
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user->setRoles($user->getRoles());
             $this->manager->persist($user);
             $this->manager->flush();
-
-//            $this->getDoctrine()->getManager()->flush();
 
             $this->addFlash('success', "L'utilisateur a bien été modifié");
 
