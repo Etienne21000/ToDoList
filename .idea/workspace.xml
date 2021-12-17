@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20211120111744.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20211120115926.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/migrations/Version20211121111553.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/error404.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Entity/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/ExceptionEventListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/ExceptionEventListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/DefaultControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/DefaultControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Entity/TaskTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/TaskTest.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="localBranch" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/zircote/swagger-php" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/vendor/symfony/password-hasher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-core" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-guard" />
+      <path value="$PROJECT_DIR$/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-csrf" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/runtime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-http" />
+      <path value="$PROJECT_DIR$/vendor/symfony/security-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php81" />
+      <path value="$PROJECT_DIR$/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/nelmio/api-doc-bundle" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/lock" />
+      <path value="$PROJECT_DIR$/vendor/symfony/rate-limiter" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="20mAOj81SsEP54tbnoMRoIoogYM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests/Controller" />
+      <recent name="$PROJECT_DIR$/src/Security/Voter" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="" />
+      <created>1636639358125</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636639358125</updated>
+      <workItem from="1636639359385" duration="2949000" />
+      <workItem from="1636646427041" duration="717000" />
+      <workItem from="1636647250640" duration="685000" />
+      <workItem from="1636647983151" duration="296000" />
+      <workItem from="1636979338345" duration="473000" />
+      <workItem from="1637227304854" duration="9663000" />
+      <workItem from="1637306216547" duration="12162000" />
+      <workItem from="1637405206283" duration="4126000" />
+      <workItem from="1637486524896" duration="6646000" />
+      <workItem from="1637914643879" duration="10741000" />
+      <workItem from="1638516329838" duration="14553000" />
+      <workItem from="1639121161876" duration="13519000" />
+      <workItem from="1639152357645" duration="314000" />
+      <workItem from="1639725181883" duration="13204000" />
+    </task>
+    <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
+      <created>1636646225705</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1636646225705</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[ToDoList]-initial commit from clone repository project">
+      <created>1636646751226</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636646751226</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[ToDoList]-commit to devBranch">
+      <created>1636647709670</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1636647709670</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[ToDoList]-commit to devBranch">
+      <created>1636648207359</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1636648207359</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[ToDoList]-configuration doctrine bundle and config.yml database">
+      <created>1637234744069</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1637234744069</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[ToDoList]-Symfony minor update from v3.1 to v3.4 + fixe deprecations">
+      <created>1637254194249</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1637254194249</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[ToDoList]-Symfony fix all Symfony profiler deprecations - refactoring directories to prepare S v5 migration">
+      <created>1637312696077</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1637312696077</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[ToDoList]-Symfony migration version from 3.1 to 5.3.1">
+      <created>1637333972433</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1637333972433</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[ToDoList]-Swagger install for technical documentation">
+      <created>1637336343598</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637336343598</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[ToDoList]-Entities modification and migration">
+      <created>1637410199287</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1637410199287</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[ToDoList]-Login and authentication">
+      <created>1637494856663</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1637494856663</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[ToDoList]-setting up login authentication and roles / fixing task controller errors">
+      <created>1637940672089</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637940672089</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[ToDoList] add new functionalities user role and security restrictions">
+      <created>1638548290746</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1638548290746</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[ToDoList] and correction and unitary test">
+      <created>1639152077448</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1639152077448</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[ToDoList]-initial commit from clone repository project" />
+    <MESSAGE value="[ToDoList]-commit to devBranch" />
+    <MESSAGE value="[ToDoList]-configuration doctrine bundle and config.yml database" />
+    <MESSAGE value="[ToDoList]-Symfony minor update from v3.1 to v3.4 + fixe deprecations" />
+    <MESSAGE value="[ToDoList]-Symfony fix all Symfony profiler deprecations - refactoring directories to prepare S v5 migration" />
+    <MESSAGE value="[ToDoList]-Symfony migration version from 3.1 to 5.3.1" />
+    <MESSAGE value="[ToDoList]-Swagger install for technical documentation" />
+    <MESSAGE value="[ToDoList]-Entities modification and migration" />
+    <MESSAGE value="[ToDoList]-Login and authentication" />
+    <MESSAGE value="[ToDoList]-setting up login authentication and roles / fixing task controller errors" />
+    <MESSAGE value="[ToDoList] add new functionalities user role and security restrictions" />
+    <MESSAGE value="[ToDoList] and correction and unitary test" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] and correction and unitary test" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="89" key="#Composer" timestamp="1636639368406">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="320" y="89" key="#Composer/0.25.1440.804@0.25.1440.804" timestamp="1636639368406" />
+    <state x="320" y="89" key="#Deployment" timestamp="1636645997227">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="320" y="89" key="#Deployment/0.25.1440.804@0.25.1440.804" timestamp="1636645997227" />
+    <state x="320" y="89" key="#PHP" timestamp="1636647214859">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="320" y="89" key="#PHP/0.25.1440.804@0.25.1440.804" timestamp="1636647214859" />
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1639128635557">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.804@0.25.1440.804" timestamp="1639128635557" />
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1639152077018">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1638548290485" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1637940671492" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1637336343318" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1639152077018" />
+    <state x="474" y="344" key="ComposerInitDialogKey" timestamp="1637407136307">
+      <screen x="0" y="25" width="1440" height="805" />
+    </state>
+    <state x="474" y="344" key="ComposerInitDialogKey/0.25.1440.805@0.25.1440.805" timestamp="1637407136307" />
+    <state x="559" y="324" key="Github.ShareDialog" timestamp="1636647234777">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="559" y="324" key="Github.ShareDialog/0.25.1440.804@0.25.1440.804" timestamp="1636647234777" />
+    <state x="432" y="148" key="MultipleFileMergeDialog" timestamp="1639152572078">
+      <screen x="0" y="25" width="1440" height="808" />
+    </state>
+    <state x="432" y="147" key="MultipleFileMergeDialog/0.25.1440.804@0.25.1440.804" timestamp="1636648122714" />
+    <state x="432" y="148" key="MultipleFileMergeDialog/0.25.1440.808@0.25.1440.808" timestamp="1639152572078" />
+    <state x="361" y="249" key="NewPhpClassDialog" timestamp="1639749823560">
+      <screen x="0" y="25" width="1440" height="813" />
+    </state>
+    <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.804@0.25.1440.804" timestamp="1638541313662" />
+    <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.805@0.25.1440.805" timestamp="1639725523083" />
+    <state x="361" y="249" key="NewPhpClassDialog/0.25.1440.810@0.25.1440.810" timestamp="1639147326686" />
+    <state x="361" y="249" key="NewPhpClassDialog/0.25.1440.813@0.25.1440.813" timestamp="1639749823560" />
+    <state x="539" y="354" key="NewPhpFileDialog" timestamp="1637313310074">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="539" y="354" key="NewPhpFileDialog/0.25.1440.804@0.25.1440.804" timestamp="1637313310074" />
+    <state x="229" y="63" key="SettingsEditor" timestamp="1636646189081">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2" timestamp="1639152080630">
+      <screen x="0" y="25" width="1440" height="810" />
+    </state>
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1638548337805" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1637940675541" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1637336347155" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1639152080630" />
+    <state x="389" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1639728243484">
+      <screen x="0" y="25" width="1440" height="805" />
+    </state>
+    <state x="389" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.25.1440.805@0.25.1440.805" timestamp="1639728243484" />
+    <state x="383" y="184" width="782" height="486" key="find.popup" timestamp="1638523701345">
+      <screen x="0" y="25" width="1440" height="804" />
+    </state>
+    <state x="383" y="184" width="782" height="486" key="find.popup/0.25.1440.804@0.25.1440.804" timestamp="1638523701345" />
+    <state x="383" y="184" width="782" height="487" key="find.popup/0.25.1440.805@0.25.1440.805" timestamp="1637409628120" />
+    <state x="383" y="184" width="782" height="488" key="find.popup/0.25.1440.806@0.25.1440.806" timestamp="1637918153006" />
+    <state x="403" y="145" key="git4idea.branch.GitSmartOperationDialog" timestamp="1639152547091">
+      <screen x="0" y="25" width="1440" height="808" />
+    </state>
+    <state x="403" y="144" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.804@0.25.1440.804" timestamp="1636648119449" />
+    <state x="403" y="145" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.808@0.25.1440.808" timestamp="1639152547091" />
+    <state x="374" y="222" key="git4idea.merge.GitPullDialog" timestamp="1639152631554">
+      <screen x="0" y="25" width="1440" height="808" />
+    </state>
+    <state x="374" y="222" key="git4idea.merge.GitPullDialog/0.25.1440.808@0.25.1440.808" timestamp="1639152631554" />
+    <state x="385" y="154" width="670" height="684" key="search.everywhere.popup" timestamp="1639733184244">
+      <screen x="0" y="25" width="1440" height="813" />
+    </state>
+    <state x="385" y="153" width="670" height="676" key="search.everywhere.popup/0.25.1440.804@0.25.1440.804" timestamp="1637253220902" />
+    <state x="385" y="153" width="670" height="677" key="search.everywhere.popup/0.25.1440.805@0.25.1440.805" timestamp="1637320856011" />
+    <state x="385" y="154" width="670" height="684" key="search.everywhere.popup/0.25.1440.813@0.25.1440.813" timestamp="1639733184244" />
+  </component>
+</project>

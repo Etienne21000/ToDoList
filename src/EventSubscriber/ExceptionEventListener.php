@@ -67,8 +67,8 @@ class ExceptionEventListener implements EventSubscriberInterface
         }
 
 //        $response->headers->set('Content-Type', 'application/ld+json');
-        $response = new RedirectResponse($url);
-        $event->setResponse($response);
+//        $response = new RedirectResponse($url);
+//        $event->setResponse($response);
 //        $this->routerInterface->generate('homepage');
     }
 }
