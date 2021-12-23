@@ -23,7 +23,9 @@ class TaskControllerTest extends webTestCase
 
     public function loginAdmin(): void
     {
-
+        $crawler = $this->client->request('GET', '/login');
+        $form = $crawler->selectButton('Sign in')->form();
+        $this->client->submit($form, ['email' => 'etienne@mail.com', 'password' => 'Equinox75!']);
     }
 
     public function testTaskList(): void
@@ -31,6 +33,12 @@ class TaskControllerTest extends webTestCase
         $this->logInUser();
         $this->client->request('GET', '/tasks');
         $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+    }
+
+    public function testTaskCreate(): void
+    {
+        $this->client->request('POST', '/tasks/create');
+
     }
 
 }

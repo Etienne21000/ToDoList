@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20211120111744.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20211120115926.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/migrations/Version20211121111553.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/error404.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Entity/UserTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/ExceptionEventListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/ExceptionEventListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/DefaultControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/DefaultControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Entity/TaskTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/TaskTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/P8_juffard_etienne.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/P8_juffard_etienne.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,11 +155,14 @@
       <path value="$PROJECT_DIR$/vendor/friendsofphp/proxy-manager-lts" />
       <path value="$PROJECT_DIR$/vendor/doctrine/migrations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-migrations-bundle" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-code" />
-      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/lock" />
       <path value="$PROJECT_DIR$/vendor/symfony/rate-limiter" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
     </include_path>
   </component>
   <component name="ProjectId" id="20mAOj81SsEP54tbnoMRoIoogYM" />
@@ -372,11 +377,12 @@
     </state>
     <state x="432" y="147" key="MultipleFileMergeDialog/0.25.1440.804@0.25.1440.804" timestamp="1636648122714" />
     <state x="432" y="148" key="MultipleFileMergeDialog/0.25.1440.808@0.25.1440.808" timestamp="1639152572078" />
-    <state x="361" y="249" key="NewPhpClassDialog" timestamp="1639749823560">
-      <screen x="0" y="25" width="1440" height="813" />
+    <state x="361" y="247" key="NewPhpClassDialog" timestamp="1640251837065">
+      <screen x="0" y="25" width="1440" height="806" />
     </state>
     <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.804@0.25.1440.804" timestamp="1638541313662" />
     <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.805@0.25.1440.805" timestamp="1639725523083" />
+    <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.806@0.25.1440.806" timestamp="1640251837065" />
     <state x="361" y="249" key="NewPhpClassDialog/0.25.1440.810@0.25.1440.810" timestamp="1639147326686" />
     <state x="361" y="249" key="NewPhpClassDialog/0.25.1440.813@0.25.1440.813" timestamp="1639749823560" />
     <state x="539" y="354" key="NewPhpFileDialog" timestamp="1637313310074">
