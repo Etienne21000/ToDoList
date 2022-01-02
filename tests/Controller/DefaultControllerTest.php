@@ -16,12 +16,12 @@ class DefaultControllerTest extends WebTestCase
     public function testIndex(): void
     {
         $this->client->request('GET', '/');
-        $this->assertResponseIsSuccessful();
+        $this->assertSame(200, $this->client->getResponse()->getStatusCode());
     }
 
     public function testNotFound(): void
     {
         $this->client->request('GET', '/notFound');
-        $this->assertResponseIsSuccessful();
+        $this->assertSame(200, $this->client->getResponse()->getStatusCode());
     }
 }

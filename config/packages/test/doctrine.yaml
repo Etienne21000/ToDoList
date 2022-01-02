@@ -1,4 +1,19 @@
-doctrine:
-    dbal:
+#doctrine:
+#    dbal:
         # "TEST_TOKEN" is typically set by ParaTest
-        dbname_suffix: '_test%env(default::TEST_TOKEN)%'
+#        dbname_suffix: '_test%env(default::TEST_TOKEN)%'
+#        dbal:
+#            url: 'mysql://root:root@localhost:3306/ToDoList'
+#            server_version: '8.0'
+#            override_url: true
+#            orm:
+#                auto_generate_proxy_classes: true
+#                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+#                auto_mapping: true
+#                mappings:
+#                    App:
+#                        is_bundle: false
+#                        type: annotation
+#                        dir: '%kernel.project_dir%/src/Entity'
+#                        prefix: 'App\Entity'
+#                        alias: App

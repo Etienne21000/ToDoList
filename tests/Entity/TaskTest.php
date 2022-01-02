@@ -2,11 +2,8 @@
 
 namespace App\Tests\Entity;
 
-
 use App\Entity\Task;
 use App\Entity\User;
-use App\Repository\UserRepository;
-use App\Repository\TaskRepository;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class TaskTest extends KernelTestCase

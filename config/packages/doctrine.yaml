@@ -1,7 +1,7 @@
 doctrine:
     dbal:
-        url: 'mysql://root:root@localhost:8888/ToDoList'
-        server_version: '5.7.34'
+        url: 'mysql://root:root@localhost:3306/ToDoList'
+        server_version: '8.0'
         override_url: true
     orm:
         auto_generate_proxy_classes: true

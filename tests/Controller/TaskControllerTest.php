@@ -3,6 +3,7 @@
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+//use App\Repository\TaskRepository;
 
 class TaskControllerTest extends webTestCase
 {
@@ -18,7 +19,6 @@ class TaskControllerTest extends webTestCase
         $crawler = $this->client->request('GET', '/login');
         $form = $crawler->selectButton('Sign in')->form();
         $this->client->submit($form, ['email' => 'max@mail.com', 'password' => 'Equinox75!']);
-        //$this->assertResponseIsSuccessful();
     }
 
     public function loginAdmin(): void
@@ -30,15 +30,52 @@ class TaskControllerTest extends webTestCase
 
     public function testTaskList(): void
     {
-        $this->logInUser();
         $this->client->request('GET', '/tasks');
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertSame(200, $this->client->getResponse()->getStatusCode());
     }
 
     public function testTaskCreate(): void
     {
-        $this->client->request('POST', '/tasks/create');
+        $this->loginAdmin();
+        $crawler = $this->client->request('POST', '/tasks/create');
+        $form = $crawler->selectButton('Ajouter')->form();
+        $form['task[title]'] = 'Test tache';
+        $form['task[content]'] = 'Test tache content';
+        $this->client->submit($form);
+        $this->assertSame(200, $this->client->getResponse()->getStatusCode());
+    }
 
+    /*public function getRandomTaskId(): int
+    {
+        $idArray = [];
+        $resp = '';
+        $getTask = new TaskRepository();
+        foreach ($getTask->findAll() as $task) {
+            $taskId = $task->getId();
+            array_push($idArray, $taskId);
+        }
+        shuffle($idArray);
+        foreach ($idArray as $id){
+            $resp = $id;
+        }
+        return $resp;
+    }*/
+
+    public function testTaskUpdate(): void
+    {
+        //$id = $this->getRandomTaskId();
+        $this->loginAdmin();
+        $crawler = $this->client->request('POST', '/tasks/6/edit');
+        $form = $crawler->selectButton('Modifier')->form();
+        $form['task[title]'] = 'Test tache modification';
+        $form['task[content]'] = 'Test tache content modification';
+        $this->client->submit($form);
+        $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
+
+        $crawler = $this->client->followRedirect();
+
+        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
+        $this->assertEquals(1, $crawler->filter('div.alert-success')->count());
     }
 
 }
