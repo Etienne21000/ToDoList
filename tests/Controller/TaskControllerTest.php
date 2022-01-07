@@ -3,7 +3,6 @@
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-//use App\Repository\TaskRepository;
 
 class TaskControllerTest extends webTestCase
 {
@@ -39,43 +38,49 @@ class TaskControllerTest extends webTestCase
         $this->loginAdmin();
         $crawler = $this->client->request('POST', '/tasks/create');
         $form = $crawler->selectButton('Ajouter')->form();
-        $form['task[title]'] = 'Test tache';
-        $form['task[content]'] = 'Test tache content';
+        $form['task[title]'] = 'Test tache 10';
+        $form['task[content]'] = 'Test tache content 10';
         $this->client->submit($form);
-        $this->assertSame(200, $this->client->getResponse()->getStatusCode());
+
+        $crawler = $this->client->followRedirect();
+
+        $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
-    /*public function getRandomTaskId(): int
+    public function testTaskCreateUnauthorized(): void
     {
-        $idArray = [];
-        $resp = '';
-        $getTask = new TaskRepository();
-        foreach ($getTask->findAll() as $task) {
-            $taskId = $task->getId();
-            array_push($idArray, $taskId);
-        }
-        shuffle($idArray);
-        foreach ($idArray as $id){
-            $resp = $id;
-        }
-        return $resp;
-    }*/
+        $this->logInUser();
+        $this->client->request('POST', '/tasks/7/edit');
+        $this->assertEquals(403, $this->client->getResponse()->getStatusCode());
+    }
 
     public function testTaskUpdate(): void
     {
-        //$id = $this->getRandomTaskId();
         $this->loginAdmin();
-        $crawler = $this->client->request('POST', '/tasks/6/edit');
+        $crawler = $this->client->request('POST', '/tasks/11/edit');
         $form = $crawler->selectButton('Modifier')->form();
         $form['task[title]'] = 'Test tache modification';
         $form['task[content]'] = 'Test tache content modification';
         $this->client->submit($form);
-        $this->assertEquals(302, $this->client->getResponse()->getStatusCode());
 
         $crawler = $this->client->followRedirect();
+        $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
+    }
 
-        $this->assertEquals(200, $this->client->getResponse()->getStatusCode());
-        $this->assertEquals(1, $crawler->filter('div.alert-success')->count());
+    public function testDeleteTask(): void
+    {
+        $this->loginAdmin();
+        $this->client->request('POST', '/tasks/13/delete');
+        $crawler = $this->client->followRedirect();
+        $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
+    }
+
+    public function testToogleTask(): void
+    {
+        $this->loginAdmin();
+        $this->client->request('POST', '/tasks/6/toggle');
+        $crawler = $this->client->followRedirect();
+        $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
 }

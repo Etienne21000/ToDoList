@@ -87,19 +87,9 @@ class UserController extends AbstractController
         $user = $this->repository->findOneBy(["id" => $id]);
         $this->denyAccessUnlessGranted('edit', $user);
         $form = $this->createForm(UserType::class, $user);
-//        dd($user->getPassword()); die();
-        $userPass = $form->get('password')->getData();
-//        if(!empty($userPass)) {
-            $password = $passwordHasher->hashPassword($user, $userPass);
-            $user->setPassword($password);
-//            //$user->setPassword($user->getPassword());
-//        }
-        //dd($userPass);
-        /*if(!empty($form->get('roles')->getData())) {
-            $user->removeRole($role);
-        }*/
         $form->handleRequest($request);
-
+        $password = $passwordHasher->hashPassword($user, $user->getPassword());
+        $user->setPassword($password);
         if ($form->isSubmitted() && $form->isValid()) {
             $user->setRoles($user->getRoles());
             $this->manager->persist($user);
