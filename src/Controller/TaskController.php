@@ -49,16 +49,18 @@ class TaskController extends AbstractController
         $user = $this->getUser();
         $form = $this->createForm(TaskType::class, $task);
 
-        $form->handleRequest($request);
-        $task->setUser($user);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-
-            $this->manager->persist($task);
-            $this->manager->flush();
-
-            $this->addFlash('success', 'La tâche a été bien été ajoutée.');
-
+        if($user){
+//            $this->denyAccessUnlessGranted('create', $task);
+            $form->handleRequest($request);
+            $task->setUser($user);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $this->manager->persist($task);
+                $this->manager->flush();
+                $this->addFlash('success', 'La tâche a été bien été ajoutée.');
+                return $this->redirectToRoute('task_list');
+            }
+        } else {
+            $this->addFlash('error', 'Vous devez être connecté pour ajouter une tâche');
             return $this->redirectToRoute('task_list');
         }
 
@@ -75,25 +77,23 @@ class TaskController extends AbstractController
     public function editAction(int $id, Request $request)
     {
         $task = $this->repository->findOneBy(["id" => $id]);
+        $title = $task->getTitle();
         $form = $this->createForm(TaskType::class, $task);
 
-        $this->denyAccessUnlessGranted('edit', $task);
-
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            /*if($task->getUser() === null) {
-                $task->setUser('anonymous');
-            }*/
-            $task->setModifiedAt(new \DateTime('now'));
-            $this->manager->persist($task);
-            $this->manager->flush();
-
-            $this->addFlash('success', 'La tâche a bien été modifiée.');
-
+        try{
+            $this->denyAccessUnlessGranted('edit', $task);
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $task->setModifiedAt(new \DateTime('now'));
+                $this->manager->persist($task);
+                $this->manager->flush();
+                $this->addFlash('success', 'La tâche '.$title.' a bien été modifiée.');
+                return $this->redirectToRoute('task_list');
+            }
+        } catch ( \Exception $e ) {
+            $this->addFlash('error', 'Vous n\'avez pas accès à cette fonction');
             return $this->redirectToRoute('task_list');
         }
-
         return $this->render('task/edit.html.twig', [
             'form' => $form->createView(),
             'task' => $task,
@@ -109,13 +109,14 @@ class TaskController extends AbstractController
     public function toggleTaskAction(int $id)
     {
         $task = $this->repository->findOneBy(['id' => $id]);
+        $title = $task->getTitle();
         $task->toggle(!$task->isDone());
         $task->setModifiedAt(new \DateTime('now'));
 
         $this->manager->persist($task);
         $this->manager->flush();
 
-        $this->addFlash('success', sprintf('La tâche %s a bien été marquée comme faite.', $task->getTitle()));
+        $this->addFlash('success', sprintf('La tâche '.$title.' a bien été marquée comme faite.', $task->getTitle()));
 
         return $this->redirectToRoute('task_list');
     }
@@ -128,12 +129,16 @@ class TaskController extends AbstractController
     public function deleteTaskAction(int $id)
     {
         $task = $this->repository->findOneBy(['id' => $id]);
-        $this->denyAccessUnlessGranted('delete', $task);
-        $this->manager->remove($task);
-        $this->manager->flush();
+        $title = $task->getTitle();
+        try{
+            $this->denyAccessUnlessGranted('delete', $task);
+            $this->manager->remove($task);
+            $this->manager->flush();
+            $this->addFlash('success', 'La tâche '.$title.' a bien été supprimée.');
 
-        $this->addFlash('success', 'La tâche a bien été supprimée.');
-
+        } catch ( \Exception $e ) {
+            $this->addFlash('error', 'Vous ne pouvez pas supprimer la tâche '.$title.' car vous n\'en êtes pas l\'auteur');
+        }
         return $this->redirectToRoute('task_list');
     }
 }

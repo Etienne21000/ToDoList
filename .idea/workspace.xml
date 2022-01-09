@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/test/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/test/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/shop-homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/shop-homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EventSubscriber/ExceptionEventListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EventSubscriber/ExceptionEventListener.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/task/list.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/list.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +254,8 @@
       <workItem from="1639152357645" duration="314000" />
       <workItem from="1639725181883" duration="13204000" />
       <workItem from="1640952722648" duration="12332000" />
-      <workItem from="1641540539674" duration="12349000" />
+      <workItem from="1641540539674" duration="12371000" />
+      <workItem from="1641730130684" duration="8579000" />
     </task>
     <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
       <created>1636646225705</created>
@@ -367,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641140493556</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[ToDoList] test fonctionnels">
+      <created>1641566418739</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1641566418739</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +397,8 @@
     <MESSAGE value="[ToDoList] and correction and unitary test" />
     <MESSAGE value="[ToDoList] test fonctionnels &amp; datafixtures" />
     <MESSAGE value="[ToDoList] test fonctionnels on taskController" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] test fonctionnels on taskController" />
+    <MESSAGE value="[ToDoList] test fonctionnels" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] test fonctionnels" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="89" key="#Composer" timestamp="1636639368406">
@@ -412,13 +422,14 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.804@0.25.1440.804" timestamp="1639128635557" />
-    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1641140492963">
-      <screen x="0" y="25" width="1440" height="806" />
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1641566418329">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1638548290485" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1637940671492" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1641140492963" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1639152077018" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.813@0.25.1440.813" timestamp="1641566418329" />
     <state x="474" y="344" key="ComposerInitDialogKey" timestamp="1637407136307">
       <screen x="0" y="25" width="1440" height="805" />
     </state>
@@ -448,13 +459,14 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1641140498547">
-      <screen x="0" y="25" width="1440" height="806" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2" timestamp="1641566421295">
+      <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1638548337805" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1637940675541" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1641140498547" />
     <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1639152080630" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.813@0.25.1440.813" timestamp="1641566421295" />
     <state x="389" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1639728243484">
       <screen x="0" y="25" width="1440" height="805" />
     </state>

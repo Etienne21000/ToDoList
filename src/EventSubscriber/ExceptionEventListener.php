@@ -11,7 +11,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\Routing\RouterInterface;
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 
 class ExceptionEventListener implements EventSubscriberInterface
 {
@@ -49,14 +48,9 @@ class ExceptionEventListener implements EventSubscriberInterface
 
         $exception = $event->getThrowable();
 
-//        if (!$exception instanceof AccessDeniedHttpException) {
-//            return;
-//        }
-
         if($exception instanceof AccessDeniedHttpException) {
             if($token->getUser()->getRoles()) {
                 $url = '/';
-//                $this->response->addFlash('error', 'Vous n\'avez pas accès à cette section');
             } else {
                 $url = '/login';
             }
@@ -66,9 +60,7 @@ class ExceptionEventListener implements EventSubscriberInterface
             $url = '/notFound';
         }
 
-//        $response->headers->set('Content-Type', 'application/ld+json');
-//        $response = new RedirectResponse($url);
-//        $event->setResponse($response);
-//        $this->routerInterface->generate('homepage');
+        $response = new RedirectResponse($url);
+        $event->setResponse($response);
     }
 }
