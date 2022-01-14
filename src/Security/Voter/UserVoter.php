@@ -11,6 +11,7 @@ class UserVoter extends Voter
 {
     const EDIT = 'edit';
     const CREATE = 'create';
+    const DELETE = 'delete';
 
     private $security;
 
@@ -30,7 +31,7 @@ class UserVoter extends Voter
      */
     protected function supports(string $attribute, $subject): bool
     {
-        if (!in_array($attribute, [self::CREATE, self::EDIT])) {
+        if (!in_array($attribute, [self::CREATE, self::EDIT, self::DELETE])) {
             return false;
         }
         if (!$subject instanceof User) {
@@ -62,7 +63,8 @@ class UserVoter extends Voter
         switch ($attribute) {
             case self::CREATE:
             case self::EDIT:
-                return $this->canDoAction($user, $userForm);
+            case self::DELETE:
+                return $this->canDoAction($userForm, $user);
                 break;
         }
         throw new \LogicException('This code should not be reached!');
@@ -73,7 +75,7 @@ class UserVoter extends Voter
      * @param User $userForm
      * @return bool
      */
-    private function canDoAction(User $user, User $userForm): bool
+    private function canDoAction(User $userForm, User $user): bool
     {
         return $user === $userForm->getId();
     }

@@ -13,7 +13,6 @@ class TaskVoter extends Voter
     const VIEW = 'view';
     const EDIT = 'edit';
     const DELETE = 'delete';
-//    const CREATE = 'create';
 
     private $security;
 
@@ -40,11 +39,6 @@ class TaskVoter extends Voter
         if (!$subject instanceof Task) {
             return false;
         }
-
-//        if(!in_array($attribute, [self::CREATE,])){
-//            return true;
-//        }
-
         return true;
     }
 

@@ -9,7 +9,7 @@ use App\Entity\User;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Faker;
 
-class AppFixtures
+class AppFixtures extends Fixture
 {
     private $passwordHasher;
 
@@ -28,7 +28,7 @@ class AppFixtures
         $manager->persist($user);
         $user->setPassword($this->passwordHasher->hashPassword(
             $user,
-            'OpenClassrooms21!'
+            'OpenClassrooms75!'
         ));
 
         $user_admin = (new User())
@@ -38,14 +38,23 @@ class AppFixtures
         $manager->persist($user_admin);
         $user_admin->setPassword($this->passwordHasher->hashPassword(
             $user_admin,
-            'OpenClassrooms21!'
+            'OpenClassrooms75!'
         ));
 
-        $userParams = [$user, $user_admin];
+        $etienne = (new User())
+            ->setPseudo('Etienne')
+            ->setEmail('etienne@mail.com')
+            ->setRoles(['ROLE_ADMIN']);
+        $manager->persist($etienne);
+        $etienne->setPassword($this->passwordHasher->hashPassword(
+            $etienne,
+            'OpenClassrooms75!'));
+
+        $userParams = [$user, $user_admin, $etienne];
         $isDoneParams = [0, 1];
 
-        for($i = 0; $i < 30; $i++) {
-            $title = $faker->title;
+        for($i = 0; $i < 20; $i++) {
+            $title = $faker->realText($maxNbChars = 20, $indexSize = 2);
             $content = $faker->text();
             $userShuffled = $this->shuffle($userParams);
             $isDone = $this->shuffle($isDoneParams);

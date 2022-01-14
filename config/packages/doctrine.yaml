@@ -2,11 +2,15 @@ doctrine:
     dbal:
         url: 'mysql://root:root@localhost:3306/ToDoList'
         server_version: '8.0'
-        override_url: true
     orm:
-        auto_generate_proxy_classes: true
+        auto_generate_proxy_classes: false
         naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
         auto_mapping: true
+
+        proxy_namespace: Proxies
+        proxy_dir: '%kernel.cache_dir%/doctrine/orm/Proxies'
+        default_entity_manager: default
+
         mappings:
             App:
                 is_bundle: false
