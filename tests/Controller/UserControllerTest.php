@@ -65,11 +65,4 @@ class UserControllerTest extends webTestCase
 
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
-
-    /*public function testListActionUnauthorized(): void
-    {
-        $this->logInUser();
-        $this->client->request('GET', '/users');
-        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
-    }*/
 }

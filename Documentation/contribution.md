@@ -2,7 +2,7 @@
 ### Formation DA php / Symfony
 ## DOCUMENTATION DEVELOPPEUR COLLABORATION
 
-##1. Versionning du projet
+## 1. Versionning du projet
 
 #### 1.1 Git
 L'application se trouve sur un repository GitHub. Afin de commencer à travailler sur le projet il faudra : 

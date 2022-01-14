@@ -31,7 +31,9 @@
                     <a class="navbar-brand" href="#">To Do List app</a>
                     <img src="{{ asset('img/Logo_OpenClassrooms.png') }}" alt="OpenClassrooms" />
                     <div class="row">
+                        {% if app.user %}
                         <a href="{{ path('task_create') }}" class="btn btn-info pull-right">Créer une tâche</a>
+                        {% endif %}
                         {% if app.user and is_granted('ROLE_ADMIN') %}
                             <a href="{{ path('user_create') }}" class="btn btn-primary">Créer un utilisateur</a>
                             <a href="{{ path('user_list') }}" class="btn btn-primary">Liste utilisateurs</a>
