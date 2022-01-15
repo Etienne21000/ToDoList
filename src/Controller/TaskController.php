@@ -39,6 +39,17 @@ class TaskController extends AbstractController
     }
 
     /**
+     * @Route("/testId", name="test_id")
+     */
+    public function lastInsertId(){
+
+//        return $lastId = 24;
+        return $this->repository->getLastInsertId();
+//        echo $test;
+//        die();
+    }
+
+    /**
      * @Route("/tasks/create", name="task_create")
      * @param Request $request
      * @return RedirectResponse|Response

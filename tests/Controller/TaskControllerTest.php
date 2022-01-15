@@ -3,6 +3,7 @@
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
+use App\Controller\TaskController;
 
 class TaskControllerTest extends webTestCase
 {
@@ -11,6 +12,14 @@ class TaskControllerTest extends webTestCase
     public function setUp(): void
     {
         $this->client = self::createClient();
+    }
+
+    public function getLastId()
+    {
+//        $this->client->request('GET', '/testId');
+//        $this->client->getResponse()->getContent();
+        return $lasId = '25';
+//        $this->getResult();
     }
 
     public function logInUser(): void
@@ -47,17 +56,11 @@ class TaskControllerTest extends webTestCase
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
-    /*public function testTaskCreateUnauthorized(): void
-    {
-        $this->logInUser();
-        $this->client->request('POST', '/tasks/8/edit');
-        $this->assertEquals(403, $this->client->getResponse()->getStatusCode());
-    }*/
-
     public function testTaskUpdate(): void
     {
+        $lastId = $this->getLastId();
         $this->loginAdmin();
-        $crawler = $this->client->request('POST', '/tasks/21/edit');
+        $crawler = $this->client->request('POST', '/tasks/'.$lastId.'/edit');
         $form = $crawler->selectButton('Modifier')->form();
         $form['task[title]'] = 'Test tache modification';
         $form['task[content]'] = 'Test tache content modification';
@@ -69,16 +72,18 @@ class TaskControllerTest extends webTestCase
 
     public function testToogleTask(): void
     {
+        $lastId = $this->getLastId();
         $this->loginAdmin();
-        $this->client->request('POST', '/tasks/21/toggle');
+        $this->client->request('POST', '/tasks/'.$lastId.'/toggle');
         $crawler = $this->client->followRedirect();
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
     public function testDeleteTask(): void
     {
+        $lastId = $this->getLastId();
         $this->loginAdmin();
-        $this->client->request('POST', '/tasks/21/delete');
+        $this->client->request('POST', '/tasks/'.$lastId.'/delete');
         $crawler = $this->client->followRedirect();
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }

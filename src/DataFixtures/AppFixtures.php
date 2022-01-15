@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
+//use App\Repository\TaskRepository;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Task;
 use App\Entity\User;
@@ -19,6 +20,7 @@ class AppFixtures extends Fixture
     }
 
     public function load(ObjectManager $manager) {
+
         $faker = Faker\Factory::create('fr_FR');
 
         $user = (new User())

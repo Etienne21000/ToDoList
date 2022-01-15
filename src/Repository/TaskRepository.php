@@ -14,9 +14,25 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class TaskRepository extends ServiceEntityRepository
 {
+    private $manager;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Task::class);
+        $this->manager = $this->getEntityManager();
+    }
+
+    public function getLastInsertId(){
+        $db = $this->manager->createQueryBuilder();
+        $db
+            ->select('*')
+            ->from('App\Entity\Task', 't')
+            ->orderBy('t.id', 'DESC')
+            ->setMaxResults(1)
+            ->setFirstResult(0);
+        $resp = $db->getQuery();
+
+        return $resp->execute();
     }
 
     // /**

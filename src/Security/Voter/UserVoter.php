@@ -56,27 +56,9 @@ class UserVoter extends Voter
 
         if($this->security->isGranted('ROLE_ADMIN')) {
             return true;
-        }
-
-        $userForm = $subject;
-
-        switch ($attribute) {
-            case self::CREATE:
-            case self::EDIT:
-            case self::DELETE:
-                return $this->canDoAction($userForm, $user);
-                break;
+        } elseif ($this->security->isGranted('ROLE_USER')){
+            return false;
         }
         throw new \LogicException('This code should not be reached!');
-    }
-
-    /**
-     * @param User $user
-     * @param User $userForm
-     * @return bool
-     */
-    private function canDoAction(User $userForm, User $user): bool
-    {
-        return $user === $userForm->getId();
     }
 }
