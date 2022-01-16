@@ -3,25 +3,32 @@
 namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
-//use App\Repository\TaskRepository;
 use Doctrine\Persistence\ObjectManager;
 use App\Entity\Task;
 use App\Entity\User;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-use Faker;
+use Faker\Factory;
 
 class AppFixtures extends Fixture
 {
     private $passwordHasher;
 
+    /**
+     * AppFixtures constructor.
+     * @param UserPasswordHasherInterface $passwordHasher
+     */
     public function __construct(UserPasswordHasherInterface $passwordHasher)
     {
         $this->passwordHasher = $passwordHasher;
     }
 
+    /**
+     * @param ObjectManager $manager
+     * @throws \Exception
+     */
     public function load(ObjectManager $manager) {
 
-        $faker = Faker\Factory::create('fr_FR');
+        $faker = Factory::create('fr_FR');
 
         $user = (new User())
             ->setPseudo('Max')
@@ -71,6 +78,11 @@ class AppFixtures extends Fixture
         $manager->flush();
     }
 
+    /**
+     * Method to shuffle params array
+     * @param $params
+     * @return mixed
+     */
     public function shuffle($params)
     {
         shuffle($params);

@@ -22,7 +22,7 @@ class TaskRepository extends ServiceEntityRepository
         $this->manager = $this->getEntityManager();
     }
 
-    public function getLastInsertId(){
+    /*public function getLastInsertId(){
         $db = $this->manager->createQueryBuilder();
         $db
             ->select('*')
@@ -33,7 +33,7 @@ class TaskRepository extends ServiceEntityRepository
         $resp = $db->getQuery();
 
         return $resp->execute();
-    }
+    }*/
 
     // /**
     //  * @return Task[] Returns an array of Task objects

@@ -18,7 +18,7 @@ class TaskControllerTest extends webTestCase
     {
 //        $this->client->request('GET', '/testId');
 //        $this->client->getResponse()->getContent();
-        return $lasId = '25';
+        return $lasId = '21';
 //        $this->getResult();
     }
 
@@ -38,6 +38,7 @@ class TaskControllerTest extends webTestCase
 
     public function testTaskList(): void
     {
+        $this->logInUser();
         $this->client->request('GET', '/tasks');
         $this->assertSame(200, $this->client->getResponse()->getStatusCode());
     }

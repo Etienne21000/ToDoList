@@ -51,8 +51,8 @@ class UserRepository extends ServiceEntityRepository implements passwordUpgrader
         ;
     }
     */
-    public function __call($name, $arguments)
+    /*public function __call($name, $arguments)
     {
         // TODO: Implement @method void upgradePassword(PasswordAuthenticatedUserInterface|UserInterface $user, string $newHashedPassword)
-    }
+    }*/
 }

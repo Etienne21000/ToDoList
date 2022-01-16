@@ -39,17 +39,6 @@ class TaskController extends AbstractController
     }
 
     /**
-     * @Route("/testId", name="test_id")
-     */
-    public function lastInsertId(){
-
-//        return $lastId = 24;
-        return $this->repository->getLastInsertId();
-//        echo $test;
-//        die();
-    }
-
-    /**
      * @Route("/tasks/create", name="task_create")
      * @param Request $request
      * @return RedirectResponse|Response
@@ -61,7 +50,6 @@ class TaskController extends AbstractController
         $form = $this->createForm(TaskType::class, $task);
 
         if($user){
-//            $this->denyAccessUnlessGranted('create', $task);
             $form->handleRequest($request);
             $task->setUser($user);
             if ($form->isSubmitted() && $form->isValid()) {
@@ -70,7 +58,7 @@ class TaskController extends AbstractController
                 $this->addFlash('success', 'La tâche a été bien été ajoutée.');
                 return $this->redirectToRoute('task_list');
             }
-        } else {
+        } else if(!$user) {
             $this->addFlash('error', 'Vous devez être connecté pour ajouter une tâche');
             return $this->redirectToRoute('task_list');
         }
