@@ -87,22 +87,21 @@ class UserController extends AbstractController
         $user = $this->repository->findOneBy(["id" => $id]);
         $form = $this->createForm(UserType::class, $user);
 
-        try{
-            $this->denyAccessUnlessGranted('edit', $user);
-            $form->handleRequest($request);
-            $password = $passwordHasher->hashPassword($user, $user->getPassword());
-            $user->setPassword($password);
-            if ($form->isSubmitted() && $form->isValid()) {
-                $user->setRoles($user->getRoles());
-                $this->manager->persist($user);
-                $this->manager->flush();
-                $this->addFlash('success', "L'utilisateur a bien été modifié");
-                return $this->redirectToRoute('user_list');
-            }
-        } catch ( \Exception $e ) {
-            $this->addFlash('error', 'Vous n\'avez pas accès à cette fonction');
-            return $this->redirectToRoute('homepage');
+        $this->denyAccessUnlessGranted('edit', $user);
+        $form->handleRequest($request);
+        $password = $passwordHasher->hashPassword($user, $user->getPassword());
+        $user->setPassword($password);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user->setRoles($user->getRoles());
+            $this->manager->persist($user);
+            $this->manager->flush();
+            $this->addFlash('success', "L'utilisateur a bien été modifié");
+            return $this->redirectToRoute('user_list');
         }
+//        } catch ( \Exception $e ) {
+//            $this->addFlash('error', 'Vous n\'avez pas accès à cette fonction');
+//            return $this->redirectToRoute('homepage');
+//        }
         return $this->render('user/edit.html.twig', ['form' => $form->createView(), 'user' => $user]);
     }
 }

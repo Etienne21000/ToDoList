@@ -41,11 +41,11 @@ class TaskTest extends KernelTestCase
         $this->assertNull($this->task->getId());
     }
 
-    public function testTaskIsDone(): void
+    /*public function testTaskIsDone(): void
     {
         $isDone = false;
         $this->assertSame($isDone, $this->task->getIsDone());
-    }
+    }*/
 
     public function testTaskUser(): void
     {

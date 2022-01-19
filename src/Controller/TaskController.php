@@ -48,21 +48,14 @@ class TaskController extends AbstractController
         $task = new Task();
         $user = $this->getUser();
         $form = $this->createForm(TaskType::class, $task);
-
-        if($user){
-            $form->handleRequest($request);
-            $task->setUser($user);
-            if ($form->isSubmitted() && $form->isValid()) {
-                $this->manager->persist($task);
-                $this->manager->flush();
-                $this->addFlash('success', 'La tâche a été bien été ajoutée.');
-                return $this->redirectToRoute('task_list');
-            }
-        } else if(!$user) {
-            $this->addFlash('error', 'Vous devez être connecté pour ajouter une tâche');
+        $form->handleRequest($request);
+        $task->setUser($user);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->manager->persist($task);
+            $this->manager->flush();
+            $this->addFlash('success', 'La tâche a été bien été ajoutée.');
             return $this->redirectToRoute('task_list');
         }
-
         return $this->render('task/create.html.twig', ['form' => $form->createView()]);
     }
 
