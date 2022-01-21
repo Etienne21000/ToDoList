@@ -31,13 +31,6 @@ class UserVoter extends Voter
      */
     protected function supports(string $attribute, $subject): bool
     {
-//        if (!in_array($attribute, [self::CREATE, self::EDIT, self::DELETE])) {
-//            return false;
-//        }
-//        if (!$subject instanceof User) {
-//            return false;
-//        }
-//        return true;
         return in_array($attribute, [self::CREATE, self::EDIT, self::VIEW], true) && $subject instanceof User;
     }
 
@@ -58,9 +51,7 @@ class UserVoter extends Voter
         if($this->security->isGranted('ROLE_ADMIN')) {
             return true;
         }
-//        if ($this->security->isGranted('ROLE_USER')){
-//            return false;
-//        }
+
         return false;
     }
 }

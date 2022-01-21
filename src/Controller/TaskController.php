@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Task;
 use App\Form\TaskType;
 use App\Repository\TaskRepository;
+use App\Security\Voter\UserVoter;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -72,7 +73,6 @@ class TaskController extends AbstractController
         $title = $task->getTitle();
         $form = $this->createForm(TaskType::class, $task);
 
-//        try{
             $this->denyAccessUnlessGranted('edit', $task);
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
@@ -82,10 +82,6 @@ class TaskController extends AbstractController
                 $this->addFlash('success', 'La tâche '.$title.' a bien été modifiée.');
                 return $this->redirectToRoute('task_list');
             }
-//        } catch ( \Exception $e ) {
-//            $this->addFlash('error', 'Vous ne pouvez pas éditer cette tâche');
-//            return $this->redirectToRoute('task_list');
-//        }
         return $this->render('task/edit.html.twig', [
             'form' => $form->createView(),
             'task' => $task,
@@ -122,15 +118,15 @@ class TaskController extends AbstractController
     {
         $task = $this->repository->findOneBy(['id' => $id]);
         $title = $task->getTitle();
-        try{
+//        try{
             $this->denyAccessUnlessGranted('delete', $task);
             $this->manager->remove($task);
             $this->manager->flush();
             $this->addFlash('success', 'La tâche '.$title.' a bien été supprimée.');
 
-        } catch ( \Exception $e ) {
+        /*} catch ( \Exception $e ) {
             $this->addFlash('error', 'Vous ne pouvez pas supprimer la tâche '.$title.' car vous n\'en êtes pas l\'auteur');
-        }
+        }*/
         return $this->redirectToRoute('task_list');
     }
 }

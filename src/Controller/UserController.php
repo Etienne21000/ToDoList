@@ -93,7 +93,7 @@ class UserController extends AbstractController
         $form->handleRequest($request);
         $password = $passwordHasher->hashPassword($user, $user->getPassword());
         $user->setPassword($password);
-        try{
+//        try{
         if ($form->isSubmitted() && $form->isValid()) {
             $user->setRoles($user->getRoles());
             $this->manager->persist($user);
@@ -101,10 +101,10 @@ class UserController extends AbstractController
             $this->addFlash('success', "L'utilisateur a bien été modifié");
             return $this->redirectToRoute('user_list');
         }
-        } catch ( \Exception $e ) {
+        /*} catch ( \Exception $e ) {
             $this->addFlash('error', 'Vous n\'avez pas accès à cette fonction');
             return $this->redirectToRoute('homepage');
-        }
+        }*/
         return $this->render('user/edit.html.twig', ['form' => $form->createView(), 'user' => $user]);
     }
 }

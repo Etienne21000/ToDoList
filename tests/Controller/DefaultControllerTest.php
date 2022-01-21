@@ -40,4 +40,11 @@ class DefaultControllerTest extends WebTestCase
         $this->client->request('GET', '/notFound');
         $this->assertSame(200, $this->client->getResponse()->getStatusCode());
     }
+
+    public function testAccessDenied(): void
+    {
+        $this->logInUser();
+        $this->client->request('GET', '/access_denied');
+        $this->assertSame(200, $this->client->getResponse()->getStatusCode());
+    }
 }

@@ -68,6 +68,13 @@ class TaskControllerTest extends webTestCase
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
+    public function testTaskUpdateAccessDenied(): void
+    {
+        $this->logInUser();
+        $this->client->request('GET', '/tasks/1/edit');
+        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
+    }
+
     public function testToogleTask(): void
     {
         $lastId = $this->getLastId();
@@ -84,5 +91,19 @@ class TaskControllerTest extends webTestCase
         $this->client->request('POST', '/tasks/'.$lastId.'/delete');
         $crawler = $this->client->followRedirect();
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
+    }
+
+    public function testDeleteTaskAccessDenied(): void
+    {
+        $this->logInUser();
+        $this->client->request('POST', '/tasks/1/delete');
+        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
+    }
+
+    public function testDeleteTaskNoUser(): void
+    {
+//        $this->logInUser();
+        $this->client->request('POST', '/tasks/1/delete');
+        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
     }
 }

@@ -24,4 +24,12 @@ class DefaultController extends AbstractController
     {
         return $this->render('default/notfound.html.twig');
     }
+
+    /**
+     * @Route("/access_denied", name="access_denied")
+     * @return Response
+     */
+    public function accessDenied() {
+        return $this->render('default/accessDenied.html.twig');
+    }
 }
