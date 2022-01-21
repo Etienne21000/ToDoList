@@ -72,7 +72,7 @@ class TaskController extends AbstractController
         $title = $task->getTitle();
         $form = $this->createForm(TaskType::class, $task);
 
-        try{
+//        try{
             $this->denyAccessUnlessGranted('edit', $task);
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
@@ -82,10 +82,10 @@ class TaskController extends AbstractController
                 $this->addFlash('success', 'La tâche '.$title.' a bien été modifiée.');
                 return $this->redirectToRoute('task_list');
             }
-        } catch ( \Exception $e ) {
-            $this->addFlash('error', 'Vous n\'avez pas accès à cette fonction');
-            return $this->redirectToRoute('task_list');
-        }
+//        } catch ( \Exception $e ) {
+//            $this->addFlash('error', 'Vous ne pouvez pas éditer cette tâche');
+//            return $this->redirectToRoute('task_list');
+//        }
         return $this->render('task/edit.html.twig', [
             'form' => $form->createView(),
             'task' => $task,

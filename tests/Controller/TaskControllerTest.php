@@ -16,10 +16,7 @@ class TaskControllerTest extends webTestCase
 
     public function getLastId()
     {
-//        $this->client->request('GET', '/testId');
-//        $this->client->getResponse()->getContent();
         return $lasId = '21';
-//        $this->getResult();
     }
 
     public function logInUser(): void

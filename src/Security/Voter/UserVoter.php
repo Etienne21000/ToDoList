@@ -11,7 +11,7 @@ class UserVoter extends Voter
 {
     const EDIT = 'edit';
     const CREATE = 'create';
-    const DELETE = 'delete';
+    const VIEW = 'view';
 
     private $security;
 
@@ -31,13 +31,14 @@ class UserVoter extends Voter
      */
     protected function supports(string $attribute, $subject): bool
     {
-        if (!in_array($attribute, [self::CREATE, self::EDIT, self::DELETE])) {
-            return false;
-        }
-        if (!$subject instanceof User) {
-            return false;
-        }
-        return true;
+//        if (!in_array($attribute, [self::CREATE, self::EDIT, self::DELETE])) {
+//            return false;
+//        }
+//        if (!$subject instanceof User) {
+//            return false;
+//        }
+//        return true;
+        return in_array($attribute, [self::CREATE, self::EDIT, self::VIEW], true) && $subject instanceof User;
     }
 
     /**
@@ -48,7 +49,7 @@ class UserVoter extends Voter
      */
     protected function voteOnAttribute(string $attribute, $subject, TokenInterface $token)
     {
-        $user = $token->getUser();
+        $user = $subject;
 
         if(!$user instanceof User) {
             return false;
@@ -56,9 +57,10 @@ class UserVoter extends Voter
 
         if($this->security->isGranted('ROLE_ADMIN')) {
             return true;
-        } elseif ($this->security->isGranted('ROLE_USER')){
-            return false;
         }
-        throw new \LogicException('This code should not be reached!');
+//        if ($this->security->isGranted('ROLE_USER')){
+//            return false;
+//        }
+        return false;
     }
 }

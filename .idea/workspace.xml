@@ -3,18 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/phpUnitTests.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/phpUnitTests.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/shop-homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/shop-homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Task.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Task.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/task/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/task/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Entity/TaskTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/TaskTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Entity/UserTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/UserTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +270,8 @@
       <workItem from="1642149160971" duration="20093000" />
       <workItem from="1642249242451" duration="5860000" />
       <workItem from="1642331194852" duration="8606000" />
-      <workItem from="1642616935487" duration="3117000" />
+      <workItem from="1642616935487" duration="3165000" />
+      <workItem from="1642751671528" duration="9441000" />
     </task>
     <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
       <created>1636646225705</created>
@@ -443,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642351823872</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[ToDoList] coverage tests p3">
+      <created>1642620410549</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1642620410549</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +477,8 @@
     <MESSAGE value="[ToDoList] documentation correction titles 2" />
     <MESSAGE value="[ToDoList] coverage tests" />
     <MESSAGE value="[ToDoList] coverage tests p2" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] coverage tests p2" />
+    <MESSAGE value="[ToDoList] coverage tests p3" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] coverage tests p3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="89" key="#Composer" timestamp="1636639368406">
@@ -496,10 +502,10 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.804@0.25.1440.804" timestamp="1639128635557" />
-    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1642351823374">
-      <screen x="0" y="25" width="1440" height="805" />
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1642620410128">
+      <screen x="0" y="25" width="1440" height="804" />
     </state>
-    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1638548290485" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1642620410128" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1642351823374" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1642183335435" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.808@0.25.1440.808" timestamp="1642263118598" />
@@ -534,10 +540,10 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1642351827076">
-      <screen x="0" y="25" width="1440" height="805" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1642620412476">
+      <screen x="0" y="25" width="1440" height="804" />
     </state>
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1638548337805" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1642620412476" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1642351827076" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1642183338441" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.808@0.25.1440.808" timestamp="1642263121184" />
@@ -582,7 +588,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/tests/Controller/TaskControllerTest.php</url>
-          <line>33</line>
+          <line>30</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
