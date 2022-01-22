@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Repository\UserRepository;
+use App\Security\Voter\UserVoter;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -42,8 +43,12 @@ class UserController extends AbstractController
     public function listAction()
     {
         $user = new User();
-        $this->denyAccessUnlessGranted('view', $user);
-        return $this->render('user/list.html.twig', ['users' => $this->getDoctrine()->getRepository('App:User')->findAll()]);
+        if($this->isGranted(UserVoter::CREATE, $user)){
+            return $this->render('user/list.html.twig', ['users' => $this->getDoctrine()->getRepository('App:User')->findAll()]);
+        } else {
+            $this->addFlash('error', 'Vous n\'avez pas accès à cette page');
+            return $this->redirectToRoute('homepage');
+        }
     }
 
     /**
@@ -55,25 +60,27 @@ class UserController extends AbstractController
     public function createAction(Request $request, UserPasswordHasherInterface $passwordHasher)
     {
         $user = new User();
-        $this->denyAccessUnlessGranted('create', $user);
-        $form = $this->createForm(UserType::class, $user);
+        if($this->isGranted(UserVoter::CREATE, $user)){
+            $form = $this->createForm(UserType::class, $user);
+            $form->handleRequest($request);
 
-        $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $password = $passwordHasher->hashPassword($user, $user->getPassword());
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $password = $passwordHasher->hashPassword($user, $user->getPassword());
+                $user->setPassword($password);
+                $user->setRoles($user->getRoles());
 
-            $user->setPassword($password);
-            $user->setRoles($user->getRoles());
+                $this->manager->persist($user);
+                $this->manager->flush();
 
-            $this->manager->persist($user);
-            $this->manager->flush();
+                $this->addFlash('success', "L'utilisateur a bien été ajouté.");
 
-            $this->addFlash('success', "L'utilisateur a bien été ajouté.");
-
-            return $this->redirectToRoute('user_list');
+                return $this->redirectToRoute('user_list');
+            }
+        } else {
+            $this->addFlash('error', 'Vous n\'avez pas accès à cette page');
+            return $this->redirectToRoute('task_list');
         }
-
         return $this->render('user/create.html.twig', ['form' => $form->createView()]);
     }
 
@@ -89,22 +96,21 @@ class UserController extends AbstractController
         $user = $this->repository->findOneBy(["id" => $id]);
         $form = $this->createForm(UserType::class, $user);
 
-        $this->denyAccessUnlessGranted('edit', $user);
-        $form->handleRequest($request);
-        $password = $passwordHasher->hashPassword($user, $user->getPassword());
-        $user->setPassword($password);
-//        try{
-        if ($form->isSubmitted() && $form->isValid()) {
-            $user->setRoles($user->getRoles());
-            $this->manager->persist($user);
-            $this->manager->flush();
-            $this->addFlash('success', "L'utilisateur a bien été modifié");
-            return $this->redirectToRoute('user_list');
+        if($this->isGranted(UserVoter::EDIT, $user)){
+            $form->handleRequest($request);
+            $password = $passwordHasher->hashPassword($user, $user->getPassword());
+            $user->setPassword($password);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $user->setRoles($user->getRoles());
+                $this->manager->persist($user);
+                $this->manager->flush();
+                $this->addFlash('success', "L'utilisateur a bien été modifié");
+                return $this->redirectToRoute('user_list');
+            }
+        } else {
+            $this->addFlash('error', 'Vous n\'avez pas accès à cette page');
+            return $this->redirectToRoute('task_list');
         }
-        /*} catch ( \Exception $e ) {
-            $this->addFlash('error', 'Vous n\'avez pas accès à cette fonction');
-            return $this->redirectToRoute('homepage');
-        }*/
         return $this->render('user/edit.html.twig', ['form' => $form->createView(), 'user' => $user]);
     }
 }

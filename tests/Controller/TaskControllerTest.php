@@ -72,7 +72,14 @@ class TaskControllerTest extends webTestCase
     {
         $this->logInUser();
         $this->client->request('GET', '/tasks/1/edit');
-        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
+    }
+
+    public function testTaskUpdateNoUser(): void
+    {
+        //$this->logInUser();
+        $this->client->request('GET', '/tasks/1/edit');
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
     }
 
     public function testToogleTask(): void
@@ -97,13 +104,12 @@ class TaskControllerTest extends webTestCase
     {
         $this->logInUser();
         $this->client->request('POST', '/tasks/1/delete');
-        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
     }
 
     public function testDeleteTaskNoUser(): void
     {
-//        $this->logInUser();
         $this->client->request('POST', '/tasks/1/delete');
-        $this->assertSame(403, $this->client->getResponse()->getStatusCode());
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
     }
 }

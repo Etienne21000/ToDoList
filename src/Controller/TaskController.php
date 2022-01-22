@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Entity\Task;
 use App\Form\TaskType;
 use App\Repository\TaskRepository;
-use App\Security\Voter\UserVoter;
+use App\Security\Voter\TaskVoter;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -73,15 +73,19 @@ class TaskController extends AbstractController
         $title = $task->getTitle();
         $form = $this->createForm(TaskType::class, $task);
 
-            $this->denyAccessUnlessGranted('edit', $task);
+        if($this->isGranted(TaskVoter::EDIT, $task) === true) {
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
                 $task->setModifiedAt(new \DateTime('now'));
                 $this->manager->persist($task);
                 $this->manager->flush();
-                $this->addFlash('success', 'La tâche '.$title.' a bien été modifiée.');
+                $this->addFlash('success', 'La tâche ' . $title . ' a bien été modifiée.');
                 return $this->redirectToRoute('task_list');
             }
+        } else {
+            $this->addFlash('error', 'Vous ne pouvez pas modifier la tâche '.$title.' car vous n\'en êtes pas l\'auteur');
+            return $this->redirectToRoute('task_list');
+        }
         return $this->render('task/edit.html.twig', [
             'form' => $form->createView(),
             'task' => $task,
@@ -118,15 +122,14 @@ class TaskController extends AbstractController
     {
         $task = $this->repository->findOneBy(['id' => $id]);
         $title = $task->getTitle();
-//        try{
-            $this->denyAccessUnlessGranted('delete', $task);
+        if($this->isGranted(TaskVoter::DELETE, $task) === true){
             $this->manager->remove($task);
             $this->manager->flush();
             $this->addFlash('success', 'La tâche '.$title.' a bien été supprimée.');
-
-        /*} catch ( \Exception $e ) {
+            return $this->redirectToRoute('task_list');
+        } else {
             $this->addFlash('error', 'Vous ne pouvez pas supprimer la tâche '.$title.' car vous n\'en êtes pas l\'auteur');
-        }*/
-        return $this->redirectToRoute('task_list');
+            return $this->redirectToRoute('task_list');
+        }
     }
 }
