@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Security/Voter/TaskVoterTest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/DefaultController.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/SecurityController.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/TaskController.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/UserController.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/Task.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/User.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/EventListener/AccessDeniedListener.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/EventListener/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/EventListener/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/TaskType.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/UserType.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/TaskRepository.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/UserRepository.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/AppLoginAuthenticator.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/TaskVoter.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/UserVoter.php.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/nv.d3.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/octicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_icons/file-code.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_icons/file-directory.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/d3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/nv.d3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testCoverage/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" afterDir="false" />
     </list>
@@ -314,7 +266,7 @@
       <workItem from="1642616935487" duration="3165000" />
       <workItem from="1642751671528" duration="13431000" />
       <workItem from="1642847954516" duration="5905000" />
-      <workItem from="1643044755811" duration="10227000" />
+      <workItem from="1643044755811" duration="10996000" />
     </task>
     <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
       <created>1636646225705</created>
@@ -512,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642866527071</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="[ToDoList] refactoring &amp; performances">
+      <created>1643292381146</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1643292381146</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,10 +533,10 @@
       <screen x="0" y="25" width="1440" height="805" />
     </state>
     <state x="324" y="254" width="794" height="322" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.25.1440.805@0.25.1440.805" timestamp="1642775221273" />
-    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1642866526695">
-      <screen x="0" y="25" width="1440" height="808" />
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1643292380049">
+      <screen x="0" y="25" width="1440" height="804" />
     </state>
-    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1642620410128" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1643292380049" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1642351823374" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1642767909252" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.808@0.25.1440.808" timestamp="1642866526695" />
@@ -612,10 +571,10 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1642866530640">
-      <screen x="0" y="25" width="1440" height="808" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1643292383361">
+      <screen x="0" y="25" width="1440" height="804" />
     </state>
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1642620412476" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1643292383361" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1642351827076" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1642767913741" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.808@0.25.1440.808" timestamp="1642866530640" />

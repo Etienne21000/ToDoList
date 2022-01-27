@@ -47,9 +47,7 @@ class TaskControllerTest extends webTestCase
         $form['task[title]'] = 'Test tache 21';
         $form['task[content]'] = 'Test tache content 21';
         $this->client->submit($form);
-
         $crawler = $this->client->followRedirect();
-
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
@@ -63,7 +61,6 @@ class TaskControllerTest extends webTestCase
         $form['task[content]'] = 'Test modification';
         $this->client->submit($form);
         $this->assertSame(302, $this->client->getResponse()->getStatusCode());
-
         $crawler = $this->client->followRedirect();
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }

@@ -57,9 +57,7 @@ class UserControllerTest extends webTestCase
         $form['user[password][second]'] = 'OpenClassrooms75!';
         $form['user[email]'] = 'testuser4@mail.com';
         $this->client->submit($form);
-
         $crawler = $this->client->followRedirect();
-
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
@@ -81,9 +79,7 @@ class UserControllerTest extends webTestCase
         $form['user[password][first]'] = 'testPass';
         $form['user[password][second]'] = 'testPass';
         $this->client->submit($form);
-
         $crawler = $this->client->followRedirect();
-
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
