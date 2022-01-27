@@ -3,7 +3,6 @@
 namespace App\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use App\Controller\TaskController;
 
 class TaskControllerTest extends webTestCase
 {
@@ -60,9 +59,10 @@ class TaskControllerTest extends webTestCase
         $this->loginAdmin();
         $crawler = $this->client->request('POST', '/tasks/'.$lastId.'/edit');
         $form = $crawler->selectButton('Modifier')->form();
-        $form['task[title]'] = 'Test tache modification';
-        $form['task[content]'] = 'Test tache content modification';
+        $form['task[title]'] = 'Test modification';
+        $form['task[content]'] = 'Test modification';
         $this->client->submit($form);
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
 
         $crawler = $this->client->followRedirect();
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
@@ -77,7 +77,6 @@ class TaskControllerTest extends webTestCase
 
     public function testTaskUpdateNoUser(): void
     {
-        //$this->logInUser();
         $this->client->request('GET', '/tasks/1/edit');
         $this->assertSame(302, $this->client->getResponse()->getStatusCode());
     }

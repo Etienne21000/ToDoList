@@ -34,6 +34,19 @@ class UserControllerTest extends webTestCase
         $this->assertSame(200, $this->client->getResponse()->getStatusCode());
     }
 
+    public function testListActionAccessDenied(): void
+    {
+        $this->logInUser();
+        $this->client->request('GET', '/users');
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
+    }
+
+    public function testListActionNoUser(): void
+    {
+        $this->client->request('GET', '/users');
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
+    }
+
     public function testCreateAction(): void
     {
         $this->loginAdmin();
@@ -50,6 +63,15 @@ class UserControllerTest extends webTestCase
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
     }
 
+    public function testCreateActionAccessDenied(): void
+    {
+        $this->logInUser();
+        $this->client->request('POST', '/users/create');
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
+        $crawler = $this->client->followRedirect();
+        $this->assertSame(1, $crawler->filter('div.alert.alert-danger')->count());
+    }
+
     public function testEditAction(): void
     {
         $this->loginAdmin();
@@ -63,5 +85,14 @@ class UserControllerTest extends webTestCase
         $crawler = $this->client->followRedirect();
 
         $this->assertSame(1, $crawler->filter('div.alert.alert-success')->count());
+    }
+
+    public function testEditActionAccessDenied(): void
+    {
+        $this->logInUser();
+        $this->client->request('POST', '/users/2/edit');
+        $this->assertSame(302, $this->client->getResponse()->getStatusCode());
+        $crawler = $this->client->followRedirect();
+        $this->assertSame(1, $crawler->filter('div.alert.alert-danger')->count());
     }
 }

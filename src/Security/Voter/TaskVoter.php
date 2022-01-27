@@ -50,10 +50,11 @@ class TaskVoter extends Voter
             return false;
         }
         if ($this->security->isGranted('ROLE_ADMIN')) {
-           /* if($task->getUser()->getId() === NULL){
-                return true;
-            }*/
             return true;
+        }
+
+        if($this->security->isGranted('ROLE_USER') && $task->getUser() === NULL){
+            return false;
         }
 
         switch ($attribute) {

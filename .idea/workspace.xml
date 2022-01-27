@@ -2,12 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tests/Security/Voter/TaskVoterTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/DefaultController.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/SecurityController.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/TaskController.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/UserController.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Controller/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/Task.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/User.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Entity/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/EventListener/AccessDeniedListener.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/EventListener/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/EventListener/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/TaskType.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/UserType.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Form/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/TaskRepository.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/UserRepository.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Repository/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/AppLoginAuthenticator.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/TaskVoter.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/UserVoter.php.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/Voter/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/Security/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/custom.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/nv.d3.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/octicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_icons/file-code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_icons/file-directory.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/d3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/file.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/nv.d3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/_js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testCoverage/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TaskController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TaskController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EventListener/AccessDeniedListener.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/TaskVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/UserVoter.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" afterDir="false" />
     </list>
@@ -270,7 +313,8 @@
       <workItem from="1642331194852" duration="8606000" />
       <workItem from="1642616935487" duration="3165000" />
       <workItem from="1642751671528" duration="13431000" />
-      <workItem from="1642847954516" duration="5869000" />
+      <workItem from="1642847954516" duration="5905000" />
+      <workItem from="1643044755811" duration="10227000" />
     </task>
     <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
       <created>1636646225705</created>
@@ -461,14 +505,20 @@
       <option name="project" value="LOCAL" />
       <updated>1642785220674</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="[ToDoList] refactoring &amp; performances">
+      <created>1642866527071</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1642866527071</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[ToDoList]-initial commit from clone repository project" />
     <MESSAGE value="[ToDoList]-commit to devBranch" />
     <MESSAGE value="[ToDoList]-configuration doctrine bundle and config.yml database" />
     <MESSAGE value="[ToDoList]-Symfony minor update from v3.1 to v3.4 + fixe deprecations" />
@@ -493,7 +543,8 @@
     <MESSAGE value="[ToDoList] coverage tests p3" />
     <MESSAGE value="[ToDoList] refactoring &amp; documentation" />
     <MESSAGE value="[ToDoList] accessDeniedHandler" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] accessDeniedHandler" />
+    <MESSAGE value="[ToDoList] refactoring &amp; performances" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] refactoring &amp; performances" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="89" key="#Composer" timestamp="1636639368406">
@@ -513,22 +564,23 @@
     </state>
     <state x="320" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.804@0.25.1440.804" timestamp="1641122874908" />
     <state x="320" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.805@0.25.1440.805" timestamp="1641119271328" />
-    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1642848457150">
-      <screen x="0" y="25" width="1440" height="805" />
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1643283464035">
+      <screen x="0" y="25" width="1440" height="806" />
     </state>
     <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.804@0.25.1440.804" timestamp="1639128635557" />
     <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.805@0.25.1440.805" timestamp="1642848457150" />
+    <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1440.806@0.25.1440.806" timestamp="1643283464035" />
     <state x="324" y="254" width="794" height="322" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1642775221273">
       <screen x="0" y="25" width="1440" height="805" />
     </state>
     <state x="324" y="254" width="794" height="322" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.25.1440.805@0.25.1440.805" timestamp="1642775221273" />
-    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1642785220406">
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1642866526695">
       <screen x="0" y="25" width="1440" height="808" />
     </state>
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1642620410128" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1642351823374" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1642767909252" />
-    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.808@0.25.1440.808" timestamp="1642785220406" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.808@0.25.1440.808" timestamp="1642866526695" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1641743412815" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.813@0.25.1440.813" timestamp="1641566418329" />
     <state x="474" y="344" key="ComposerInitDialogKey" timestamp="1637407136307">
@@ -544,12 +596,12 @@
     </state>
     <state x="432" y="147" key="MultipleFileMergeDialog/0.25.1440.804@0.25.1440.804" timestamp="1636648122714" />
     <state x="432" y="148" key="MultipleFileMergeDialog/0.25.1440.808@0.25.1440.808" timestamp="1639152572078" />
-    <state x="361" y="247" key="NewPhpClassDialog" timestamp="1642775984001">
-      <screen x="0" y="25" width="1440" height="805" />
+    <state x="361" y="247" key="NewPhpClassDialog" timestamp="1643283445035">
+      <screen x="0" y="25" width="1440" height="806" />
     </state>
     <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.804@0.25.1440.804" timestamp="1638541313662" />
     <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.805@0.25.1440.805" timestamp="1642775984001" />
-    <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.806@0.25.1440.806" timestamp="1640251837065" />
+    <state x="361" y="247" key="NewPhpClassDialog/0.25.1440.806@0.25.1440.806" timestamp="1643283445035" />
     <state x="361" y="249" key="NewPhpClassDialog/0.25.1440.810@0.25.1440.810" timestamp="1639147326686" />
     <state x="361" y="249" key="NewPhpClassDialog/0.25.1440.813@0.25.1440.813" timestamp="1639749823560" />
     <state x="539" y="354" key="NewPhpFileDialog" timestamp="1637313310074">
@@ -560,13 +612,13 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1642785222864">
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1642866530640">
       <screen x="0" y="25" width="1440" height="808" />
     </state>
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1642620412476" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1642351827076" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1642767913741" />
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.808@0.25.1440.808" timestamp="1642785222864" />
+    <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.808@0.25.1440.808" timestamp="1642866530640" />
     <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1641743415970" />
     <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.813@0.25.1440.813" timestamp="1641566421295" />
     <state x="389" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1639728243484">
@@ -596,19 +648,19 @@
       <screen x="0" y="25" width="1440" height="805" />
     </state>
     <state x="482" y="52" key="refactoring.ChangeSignatureDialog/0.25.1440.805@0.25.1440.805" timestamp="1641139470145" />
-    <state x="385" y="154" width="670" height="684" key="search.everywhere.popup" timestamp="1639733184244">
+    <state x="385" y="154" width="670" height="684" key="search.everywhere.popup" timestamp="1643274894434">
       <screen x="0" y="25" width="1440" height="813" />
     </state>
     <state x="385" y="153" width="670" height="676" key="search.everywhere.popup/0.25.1440.804@0.25.1440.804" timestamp="1637253220902" />
     <state x="385" y="153" width="670" height="677" key="search.everywhere.popup/0.25.1440.805@0.25.1440.805" timestamp="1637320856011" />
-    <state x="385" y="154" width="670" height="684" key="search.everywhere.popup/0.25.1440.813@0.25.1440.813" timestamp="1639733184244" />
+    <state x="385" y="154" width="670" height="684" key="search.everywhere.popup/0.25.1440.813@0.25.1440.813" timestamp="1643274894434" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/tests/Controller/TaskControllerTest.php</url>
-          <line>30</line>
+          <line>29</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
