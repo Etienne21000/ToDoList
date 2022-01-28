@@ -9,10 +9,11 @@ Vous collaborez sur le projet ToDoList cela signifie que vous travaillez à plus
 
 Il convient également de respecter certains standards de développement web liés à php et Symfony.
 
-Lorsque vous développer une nouvelle fonctionnalité :
+Lorsque vous développez une nouvelle fonctionnalité :
 - ajouter la php doc correspondante, vous pouvez également y ajouter une courte description indiquant votre nom, la date de création et la fonctionnalité développée
 - s'assurer que les variables et methodes sont bien typées
 - s'assurer que la ou les méthodes créées ne sont pas trop complexes / longues vous pouvez scinder une fonctionnalité en plusieurs méthodes
+- dans certains cas vous pourrez créer des services (methode(s) qui peuvent être utilisées dans plusieurs classes)
 #### 1.2 Tester, tester, tester...
 Un autre élément important pour le développement de ce projet, qu'il s'agisse d'ajouts ou de modifications est de tester ce que vous avez fait avant de faire un commit.
 Le dossier de test se trouve à la racine du projet. 
@@ -44,8 +45,8 @@ L'application se trouve sur un repository GitHub. Afin de commencer à travaille
 
 #### 2.2 Commit
 Afin de respecter les standards mis en place dans le developpement de cette application, vous devrez :
-- Créer une nouvelle branche pour tous vos ajouts (michel_local par exemple) à partir de LocalBranch
-- Vous pouvez effectuer une pull Request à partir de LocalBranch avant de créer votre branch éphémère afin d'être à jour sur le projet
+- Créer une nouvelle branche pour tous vos ajouts (michel_local par exemple) à partir de devBranch
+- Vous pouvez effectuer une pull Request à partir de devBranch avant de créer votre branch éphémère afin d'être à jour sur le projet
 - Commit puis pusher cette branche sur le repository GitHub
 - Après chaque journée de travail sur l'application il faudra Commit puis pusher sur le Repository GitHub
 - Attention : Veillez à bien pusher vos commits depuis votre branche vers son clone sur GitHub.
@@ -73,8 +74,8 @@ Une fois merger effectuez la même opération depuis devBranch vers Master.
 Après avoir créé et merger les pull requests jusqu'à la branch Master vous pourrez :
 - Supprimer votre branche soit depuis GitHub soit depuis votre IDE
 - Fetch les branches pour quelles se mettent à jour sur votre IDE
-- Effectuer une pull request depuis localBranch vers votre IDE (localBranch Egalement) afin que le projet soit à jour sur votre environement local
-- Créer une nouvelle branche à partir de localBranch et répéter les opération à partir de la section 2.2 de ce document
+- Effectuer une pull request depuis devBranch vers votre IDE (devBranch Egalement) afin que le projet soit à jour sur votre environement local
+- Créer une nouvelle branche à partir de devBranch et répéter les opération à partir de la section 2.2 de ce document
 
 
 
