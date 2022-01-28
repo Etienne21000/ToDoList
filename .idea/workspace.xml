@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Documentation/ameliorations.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/TaskControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Controller/UserControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/contribution.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/contribution.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/documentation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +268,7 @@
       <workItem from="1642616935487" duration="3165000" />
       <workItem from="1642751671528" duration="13431000" />
       <workItem from="1642847954516" duration="5905000" />
-      <workItem from="1643044755811" duration="10996000" />
+      <workItem from="1643044755811" duration="21113000" />
     </task>
     <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
       <created>1636646225705</created>
@@ -471,14 +473,20 @@
       <option name="project" value="LOCAL" />
       <updated>1643292381146</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="[ToDoList] optimisations">
+      <created>1643299308799</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1643299308799</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[ToDoList]-commit to devBranch" />
     <MESSAGE value="[ToDoList]-configuration doctrine bundle and config.yml database" />
     <MESSAGE value="[ToDoList]-Symfony minor update from v3.1 to v3.4 + fixe deprecations" />
     <MESSAGE value="[ToDoList]-Symfony fix all Symfony profiler deprecations - refactoring directories to prepare S v5 migration" />
@@ -503,7 +511,8 @@
     <MESSAGE value="[ToDoList] refactoring &amp; documentation" />
     <MESSAGE value="[ToDoList] accessDeniedHandler" />
     <MESSAGE value="[ToDoList] refactoring &amp; performances" />
-    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] refactoring &amp; performances" />
+    <MESSAGE value="[ToDoList] optimisations" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ToDoList] optimisations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="89" key="#Composer" timestamp="1636639368406">
@@ -533,14 +542,14 @@
       <screen x="0" y="25" width="1440" height="805" />
     </state>
     <state x="324" y="254" width="794" height="322" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.25.1440.805@0.25.1440.805" timestamp="1642775221273" />
-    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1643292380049">
-      <screen x="0" y="25" width="1440" height="804" />
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1643299308656">
+      <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1643292380049" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1642351823374" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1642767909252" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.808@0.25.1440.808" timestamp="1642866526695" />
-    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1641743412815" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1643299308656" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.813@0.25.1440.813" timestamp="1641566418329" />
     <state x="474" y="344" key="ComposerInitDialogKey" timestamp="1637407136307">
       <screen x="0" y="25" width="1440" height="805" />
@@ -571,14 +580,14 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
-    <state x="320" y="152" key="Vcs.Push.Dialog.v2" timestamp="1643292383361">
-      <screen x="0" y="25" width="1440" height="804" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2" timestamp="1643299312354">
+      <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1643292383361" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1642351827076" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1642767913741" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.808@0.25.1440.808" timestamp="1642866530640" />
-    <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1641743415970" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1643299312354" />
     <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.813@0.25.1440.813" timestamp="1641566421295" />
     <state x="389" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1639728243484">
       <screen x="0" y="25" width="1440" height="805" />

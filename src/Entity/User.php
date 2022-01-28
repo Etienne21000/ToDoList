@@ -162,11 +162,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
     }
 
-   /* public function __call($name, $arguments)
-    {
-        // TODO: Implement @method string getUserIdentifier()
-    }*/
-
     /**
      * @return Collection|Task[]
      */
@@ -184,16 +179,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-
-    /*public function removeTask(Task $task): self
-    {
-        if ($this->tasks->removeElement($task)) {
-            // set the owning side to null (unless already changed)
-            if ($task->getUser() === $this) {
-                $task->setUser(null);
-            }
-        }
-
-        return $this;
-    }*/
 }
