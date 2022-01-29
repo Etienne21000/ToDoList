@@ -16,7 +16,7 @@ L'authentification des utilisateurs avec Symfony s'effectue à travers différen
 
 #### 1.1 Où trouver ces fichiers
 
-Voici l'arborécence des fichiers d'authentification qui vous permettra de les retrouver facilement :
+Voici l'arborescence des fichiers d'authentification qui vous permettra de les retrouver facilement :
 ```
 |--config
     |--packages
@@ -45,13 +45,13 @@ On a définit ces accès dans le firewall du fichier `security.yml`, qui redirig
 
 Par exemple : 
 
-Les `ROLE_USER` ne peuvent pas supprimer de tachês qu'ils n'ont pas créés, c'est le TaskVoter qui va définir si l'utilisateur lié à la tâche est le même que l'utilisateur connecté, il pourra effectuer cette action.
+Les `ROLE_USER` ne peuvent pas supprimer de taches qu'ils n'ont pas créés, c'est le TaskVoter qui va définir si l'utilisateur lié à la tâche est le même que l'utilisateur connecté, il pourra effectuer cette action.
 
 ## 1. Entity User
 
 La classe User ``(src/Entity/User)`` représente les différents elements qui caractérisent un utilisateur.
 Cette classe se trouve dans le NameSpace ``App\Entity\``. Elle implémente les classes Symfony ``UserInterface`` et `PasswordAuthenticatedUserInterface`.
-La classe est composée de variable dont la proté est restrainte à la classe qui l'utilise (private) et
+La classe est composée de variable dont la porté est restreinte à la classe qui l'utilise (private) et
 des getteurs et setteurs, qui permettent de récupérer et de poster des données.
 
 #### 1.1 UserInterface
@@ -60,7 +60,7 @@ Cette classe Symfony permet d'instancier des methodes particulières telles que
 getRoles()
 getUserIdentifier()
 ``` 
-qui simplifient et securisent l'utilisation de l'entity User. 
+qui simplifient et sécurisent l'utilisation de l'entity User. 
 
 #### 1.2 PasswordAuthenticatedUserInterface
 Cette classe Symfony permet de décoder les mots de passe utilisateurs (encodé dans la class src/Controller/UserController).
@@ -88,14 +88,14 @@ L'annotation `UniqueEntity` est donc le provider de connexion fournit par l'Enti
 
 Le paramètre `$roles` qui renvoie un tableau permet de définir le ou les rôles attribués à un User.
 
-Le paramètre `$password` permet de définir le mot de passe de l'utilisateur qui sera ensuite hashé et qui est définit dans le fichier `security.yml
+Le paramètre `$password` permet de définir le mot de passe de l'utilisateur qui sera ensuite hashé et qui est définit dans le fichier `security.yml`
 
-NB: Lorsqu'on modifie des annotations dans une Entity il ne faut pas oublié deffectuer une migration avec Doctrine afin de mettre à jour la base de données.
+NB: Lorsqu'on modifie des annotations dans une Entity il ne faut pas oublier d’effectuer une migration avec Doctrine afin de mettre à jour la base de données.
 
 ## 2. Security.yml
 Ce fichier de configuration du système de securité de Symfony permet de configurer le type d'encodage souhaité pour les mots de passe, Provider (identification unique pour les utilisateurs) et le Firewall.
 #### 2.1 Password_hasher
-Le password utilisateur utilise l'agorythme de hashage des mots de passe : 
+Le password utilisateur utilise l'agoryithme de hashage des mots de passe : 
 ```yaml
 yamlsecurity:
     enable_authenticator_manager: true
@@ -142,7 +142,7 @@ Dans ce cas de figure, seule la route de login est accessible par des utilisateu
 Comme expliqué précédemment, après le traitement de l'authentification, l'utilisateur est redirigé vers la page demander.
 Un système de Voters à été mis en place afin de dispatcher les utilisateur selon leur rôle.
 - ROLE_ADMIN peut effectué toutes les actions sur l'application
-- ROLE_USER n'aura pas accès au CRUD User et ne pourra avoir que des intéractions limitées sur Task :
+- ROLE_USER n'aura pas accès au CRUD User et ne pourra avoir que des interactions limitées sur Task :
 Il ne pourra modifier ou supprimer que des tâches qu'ils à lui même créé.
 
 Le rôle du TaskVoter va être de venir vérifier si le user_id attaché à la tâche que l'on veut modifier / supprimer est bien celui de l'utilisateur connecté :
@@ -168,5 +168,5 @@ if(this->security->isGranted('ROLE_USER') && $task->getUser() === NULL)
 
 Enfin, on appelle dans les méthodes des controller les voter afin qu'ils puissent définir si l'action est possible ou non :
 ```php
-$ths->isGranted(TaskVoter::EDIT, $task);
+$this->isGranted(TaskVoter::EDIT, $task);
 ```

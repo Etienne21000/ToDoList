@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9b5ca718-691c-451e-9479-9c3f6c495b54" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/contribution.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/contribution.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/documentation.md" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/documentation.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,11 +212,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/Edit As Language" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Livrables/P8_Etienne_Juffard" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../../Livrables/P8_Etienne_Juffard" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/src" />
@@ -265,7 +266,9 @@
       <workItem from="1642616935487" duration="3165000" />
       <workItem from="1642751671528" duration="13431000" />
       <workItem from="1642847954516" duration="5905000" />
-      <workItem from="1643044755811" duration="22334000" />
+      <workItem from="1643044755811" duration="22378000" />
+      <workItem from="1643452532824" duration="574000" />
+      <workItem from="1643453128815" duration="1561000" />
     </task>
     <task id="LOCAL-00001" summary="[ToDoList]-initial commit from clone repository project">
       <created>1636646225705</created>
@@ -484,7 +487,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643378760254</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[ToDoList] documentation">
+      <created>1643389219302</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1643389219302</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -536,6 +546,14 @@
     </state>
     <state x="320" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.804@0.25.1440.804" timestamp="1641122874908" />
     <state x="320" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1440.805@0.25.1440.805" timestamp="1641119271328" />
+    <state x="465" y="267" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1643452668277">
+      <screen x="0" y="25" width="1440" height="806" />
+    </state>
+    <state x="465" y="267" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.25.1440.806@0.25.1440.806" timestamp="1643452668277" />
+    <state x="484" y="261" key="#com.intellij.tools.ToolEditorDialog" timestamp="1643453491480">
+      <screen x="0" y="25" width="1440" height="806" />
+    </state>
+    <state x="484" y="261" key="#com.intellij.tools.ToolEditorDialog/0.25.1440.806@0.25.1440.806" timestamp="1643453491480" />
     <state x="458" y="186" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1643283464035">
       <screen x="0" y="25" width="1440" height="806" />
     </state>
@@ -546,14 +564,14 @@
       <screen x="0" y="25" width="1440" height="805" />
     </state>
     <state x="324" y="254" width="794" height="322" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.25.1440.805@0.25.1440.805" timestamp="1642775221273" />
-    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1643378760086">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state x="232" y="26" key="CommitChangelistDialog2" timestamp="1643389219141">
+      <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.804@0.25.1440.804" timestamp="1643292380049" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.805@0.25.1440.805" timestamp="1642351823374" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.806@0.25.1440.806" timestamp="1642767909252" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.808@0.25.1440.808" timestamp="1642866526695" />
-    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1643299308656" />
+    <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.810@0.25.1440.810" timestamp="1643389219141" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.813@0.25.1440.813" timestamp="1641566418329" />
     <state x="232" y="26" key="CommitChangelistDialog2/0.25.1440.815@0.25.1440.815" timestamp="1643378760086" />
     <state x="474" y="344" key="ComposerInitDialogKey" timestamp="1637407136307">
@@ -581,18 +599,19 @@
       <screen x="0" y="25" width="1440" height="804" />
     </state>
     <state x="539" y="354" key="NewPhpFileDialog/0.25.1440.804@0.25.1440.804" timestamp="1637313310074" />
-    <state x="229" y="63" key="SettingsEditor" timestamp="1636646189081">
-      <screen x="0" y="25" width="1440" height="804" />
+    <state x="229" y="63" key="SettingsEditor" timestamp="1643453508066">
+      <screen x="0" y="25" width="1440" height="806" />
     </state>
     <state x="229" y="63" key="SettingsEditor/0.25.1440.804@0.25.1440.804" timestamp="1636646189081" />
-    <state x="320" y="154" key="Vcs.Push.Dialog.v2" timestamp="1643378762191">
-      <screen x="0" y="25" width="1440" height="815" />
+    <state x="229" y="63" key="SettingsEditor/0.25.1440.806@0.25.1440.806" timestamp="1643453508066" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2" timestamp="1643389220889">
+      <screen x="0" y="25" width="1440" height="810" />
     </state>
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.804@0.25.1440.804" timestamp="1643292383361" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.805@0.25.1440.805" timestamp="1642351827076" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.806@0.25.1440.806" timestamp="1642767913741" />
     <state x="320" y="152" key="Vcs.Push.Dialog.v2/0.25.1440.808@0.25.1440.808" timestamp="1642866530640" />
-    <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1643299312354" />
+    <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.810@0.25.1440.810" timestamp="1643389220889" />
     <state x="320" y="153" key="Vcs.Push.Dialog.v2/0.25.1440.813@0.25.1440.813" timestamp="1641566421295" />
     <state x="320" y="154" key="Vcs.Push.Dialog.v2/0.25.1440.815@0.25.1440.815" timestamp="1643378762191" />
     <state x="389" y="100" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1639728243484">
